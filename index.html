@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <title>Reisen Reisen</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="image/x-icon" href="images/rakete.png">
-</head>
-<body>
-<div class = "center" >
-<h1>Reisen Reisen</h1>
-</div>
-<img src="images/rakete.png" alt="hier soll ein Logo hin">
+    <head>
+        <meta charset="UTF-8">
+        <title>Reisen Reisen</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" type="image/x-icon" href="images/rakete.svg">
+    </head>
 
-<!--Passwort Funktion-->
-<div class="center">
-    <form action="#">
-        <label for="email"></label><input type="email" id="email" placeholder="E-Mail" required/>
+    <body>
+        <div class = "center" >
+            <div class="header">
+            <h1>Reisen Reisen</h1>
+                <img src="images/rakete.svg" alt="Logo" width="50em">
+            </div>
+        </div>
+        <!--Passwort Funktion-->
+        <div class="center">
+            <form action="#">
+                <label for="email"></label><input type="email" id="email" placeholder="E-Mail" required/>
+                <br>
+                <br>
+                <label for="passwort"></label><input type="password" id="passwort" placeholder="Passwort" required/>
+            </form>
+        </div>
 
-        <br>
-        <label for="passwort"></label><input type="password" id="passwort" placeholder="Passwort" required/>
+        <!--Navigationsbar-->
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li>Angebote</li>
+                    <li>Reisen Reisen Reisewelt</li>
+                    <li>Accountverwaltung</li>
+                </ul>
+            </nav>
+        </div>
 
-    </form>
-</div>
+        <!--"interaktive" Weltkarte-->
+        <div class="center">
+            <img src="images/map.jpg" alt="Weltkarte">
+        </div>
 
-<!--Navigationsbar-->
-<div class="navbar">
-    <nav>
-        <ul>
-            <li>Angebote</li>
-            <li>Reisen Reisen Reisewelt</li>
-            <li>Accountverwaltung</li>
-        </ul>
-    </nav>
-</div>
+        <!--Eingabemaske fürs Reise Buchen toDo Fomular soll durch button verborgen sein-->
+        <div class="grid-container">
+            <p>hier kommmt ein Formular zum Buchen einer Reise hin</p>
+            <button type="button" onclick="">Neue Reise buchen</button>
 
-<!--"interaktive" Weltkarte-->
-<div class="center">
-    <p>hier kommt eine Weltkarte mit map für tolle Reiseangebote hin</p>
-    <img src="images/map.jpg" alt="Weltkarte">
-</div>
+            <div class="grid-item-links">
+                <h2>Neue Reise</h2>
 
 
-<!--Eingabemaske fürs Reise Buchen toDo Fomular soll durch button verborgen sein-->
-<p>hier kommmt ein Formular zum Buchen einer Reise hin</p>
-<form action="#">
-    <label for = "checkboxReisen">Reise Auswählen</label>
-    <input type="checkbox" id="checkboxReisen">
-</form>
-<!--Übersicht über gebuchte Reisen
-toDo interaktion in bearbeitungsfeld-->
-<p>hier kommt eine Tabelle als übersicht für Reisen mit coolen Zeilenfunktionen hin</p>
-<table>
-    <tr>
-        <th>Reise</th>
-        <th>Reise bearbeiten</th>
-    </tr>
-    <tr>
-        <td>Reise 1</td>
-        <td>bearbeiten</td>
-    </tr>
-    <tr>
-        <td>Reise 2</td>
-        <td>bearbeiten</td>
-    </tr>
-</table>
-</body>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Übersicht über gebuchte Reisen
+        toDo interaktion in bearbeitungsfeld-->
+        <div>
+            <p>hier kommt eine Tabelle als übersicht für Reisen mit coolen Zeilenfunktionen hin</p>
+            <!--tabellen passen sich irgendwie nicht an center an-->
+            <table>
+                <tr>
+                    <th>Reise</th>
+                    <th>Reise bearbeiten</th>
+                </tr>
+                <tr>
+                    <td>Reise 1</td>
+                    <td>bearbeiten</td>
+                </tr>
+                <tr>
+                    <td>Reise 2</td>
+                    <td>bearbeiten</td>
+                </tr>
+            </table>
+        </div>
+    </body>
 </html>
