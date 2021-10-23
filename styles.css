@@ -45,3 +45,17 @@ button {
 .navbar li:hover{
     background-color: black;
 }
+
+.reiseTabelle table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.reiseTabelle td,.reiseTabelle th{
+    border: 1px solid black;
+    padding: 8px;
+}
+.reiseTabelle th{
+    background-color: darkcyan;
+    text-align: left;
+}
+.reiseTabelle tr:hover{ background-color: rgba(86, 210, 86, 0.63); }

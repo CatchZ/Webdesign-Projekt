@@ -38,8 +38,11 @@
 
         <!--"interaktive" Weltkarte-->
         <div class="center">
-            <img src="images/map.jpg" alt="Weltkarte">
+            <img src="images/map.jpg" alt="Weltkarte"><!--usemap="WeltkarteMap" width="1300" height="649"-->
             <br><br>
+            <!--<map name="WeltkarteMap">
+                <area shape="rect" coords="34,44,340,500" alt="Amerika">
+            </map>-->
             <!--todo den button größer als die anderen-->
             <button type="button" onclick="">Neue Reise buchen</button>
 
@@ -73,20 +76,24 @@
         <!--Übersicht über gebuchte Reisen
         toDo interaktion in bearbeitungsfeld-->
         <!--todo die bearbeiten buttons sollten wohl kleiner sein-->
-        <div>
+        <div class = reiseTabelle>
             <p>hier kommt eine Tabelle als übersicht für Reisen mit coolen Zeilenfunktionen hin</p>
             <!--tabellen passen sich irgendwie nicht an center an-->
             <table>
                 <tr>
+                    <th>Reise</th>
+                    <th>Reisedetails</th>
                     <th>Reise bearbeiten</th>
                 </tr>
                 <tr>
                     <td>Reise 1</td>
+                    <td>Reise 1 Details</td>
                     <td> <button type="button" onclick="">Bearbeiten</button>
                     </td>
                 </tr>
                 <tr>
                     <td>Reise 2</td>
+                    <td>Reise 2 Details</td>
                     <td> <button type="button" onclick="">Bearbeiten</button>
                     </td>
                 </tr>
