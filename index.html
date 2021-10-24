@@ -1,105 +1,100 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
-    <head>
-        <meta charset="UTF-8">
-        <title>Reisen Reisen</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="shortcut icon" type="image/x-icon" href="images/rakete.svg">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Reisen Reisen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/rakete.svg">
+</head>
 
-    <body>
-        <div class = "center" >
-            <div class="header">
-            <h1>Reisen Reisen</h1>
-                <img src="images/rakete.svg" alt="Logo" width="50em">
-            </div>
-        </div>
-        <!--Passwort Funktion-->
-        <div class="center">
-            <form action="#">
-                <label for="email"></label><input type="email" id="email" placeholder="E-Mail" required/>
-                <br>
-                <br>
-                <label for="passwort"></label><input type="password" id="passwort" placeholder="Passwort" required/>
-                <br><br> <!--todo eventuell center divs margin/padding bottom geben?-->
-            </form>
-        </div>
+<body>
+<div class = "center" >
+    <div class="header">
+        <h1>Reisen Reisen</h1>
+        <img src="images/rakete.svg" alt="Logo" width="50em">
+    </div>
+</div>
+<!--Passwort Funktion-->
+<div class="center">
+    <form action="#">
+        <label for="email"></label><input type="email" id="email" placeholder="E-Mail" required/>
+        <br>
+        <br>
+        <label for="passwort"></label><input type="password" id="passwort" placeholder="Passwort" required/>
+        <br><br> <!--todo eventuell center divs margin/padding bottom geben?-->
+    </form>
+</div>
 
-        <!--Navigationsbar-->
-        <div class="navbar">
-            <nav>
-                <ul>
-                    <li>Angebote</li>
-                    <li>Reisen Reisen Reisewelt</li>
-                    <li>Accountverwaltung</li>
-                </ul>
-            </nav>
-        </div>
+<!--Navigationsbar-->
+<div class="navbar">
+    <nav>
+        <ul>
+            <li>Angebote</li>
+            <li>Reisen Reisen Reisewelt</li>
+            <li>Accountverwaltung</li>
+        </ul>
+    </nav>
+</div>
 
-        <!--"interaktive" Weltkarte-->
-        <div class="center">
-            <img src="images/map.jpg" alt="Weltkarte"><!--usemap="WeltkarteMap" width="1300" height="649"-->
-            <br><br>
-            <!--<map name="WeltkarteMap">
-                <area shape="rect" coords="34,44,340,500" alt="Amerika">
-            </map>-->
-            <!--todo den button größer als die anderen-->
-            <button type="button" onclick="">Neue Reise buchen</button>
+<!--"interaktive" Weltkarte-->
+<div class="center">
+    <img src="images/map.jpg" alt="Weltkarte" width="60%"><!--usemap="WeltkarteMap" width="1300" height="649"-->
+    <br><br>
+    <!--<map name="WeltkarteMap">
+        <area shape="rect" coords="34,44,340,500" alt="Amerika">
+    </map>-->
+    <!--todo den button größer als die anderen-->
+    <button type="button" onclick="">Neue Reise buchen</button>
 
-        </div>
+</div>
 
-        <!--Eingabemaske fürs Reise Buchen toDo Fomular soll durch button verborgen sein-->
-        <div class="grid-container">
-            <div class="grid-container">
-                <!--todo die sind nicht aligned :-/-->
-                <div class="grid-item-links">
-                    <h2>Neue Reise</h2>
-                    <label for ="reisename">Name der Reise: </label>
-                    <input type="text" id="reisename" required/>
-                    <br><br>
-                    <label for ="reiseziel">Reiseziel: </label>
-                    <input type="text" id="reiseziel" required/>
-                    <br><br>
-                    <label for ="startdatum">Startdatum: </label>
-                    <input type="date" id="startdatum" required/>
-                    <br><br>
-                    <label for ="enddatum">Reiseziel: </label>
-                    <input type="date" id="enddatum" required/>
-                    <br><br>
-                    <button type="button" onclick="">Bestätigen</button>
-                    <br><br>
-                </div>
+<!--Eingabemaske fürs Reise Buchen toDo Fomular soll durch button verborgen sein-->
+<div class="center">
+    <!--todo die sind nicht aligned :-/-->
+    <h2>Neue Reise</h2>
+    <label for ="reisename">Name der Reise: </label>
+    <input type="text" id="reisename" required/>
+    <br><br>
+    <label for ="reiseziel">Reiseziel: </label>
+    <input type="text" id="reiseziel" required/>
+    <br><br>
+    <label for ="startdatum">Startdatum: </label>
+    <input type="date" id="startdatum" required/>
+    <br><br>
+    <label for ="enddatum">Reiseziel: </label>
+    <input type="date" id="enddatum" required/>
+    <br><br>
+    <button type="button" onclick="">Bestätigen</button>
+    <br><br>
+</div>
 
-            </div>
-        </div>
-
-        <!--Übersicht über gebuchte Reisen
-        toDo interaktion in bearbeitungsfeld-->
-        <!--todo die bearbeiten buttons sollten wohl kleiner sein-->
-        <div class = reiseTabelle>
-            <p>hier kommt eine Tabelle als übersicht für Reisen mit coolen Zeilenfunktionen hin</p>
-            <!--tabellen passen sich irgendwie nicht an center an-->
-            <table>
-                <tr>
-                    <th>Reise</th>
-                    <th>Reisedetails</th>
-                    <th>Reise bearbeiten</th>
-                </tr>
-                <tr>
-                    <td>Reise 1</td>
-                    <td>Reise 1 Details</td>
-                    <td> <button type="button" onclick="">Bearbeiten</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Reise 2</td>
-                    <td>Reise 2 Details</td>
-                    <td> <button type="button" onclick="">Bearbeiten</button>
-                    </td>
-                </tr>
-            </table>
-        </div>
+<!--Übersicht über gebuchte Reisen
+toDo interaktion in bearbeitungsfeld-->
+<!--todo die bearbeiten buttons sollten wohl kleiner sein-->
+<div class = reiseTabelle>
+    <p>hier kommt eine Tabelle als übersicht für Reisen mit coolen Zeilenfunktionen hin</p>
+    <!--tabellen passen sich irgendwie nicht an center an-->
+    <table>
+        <tr>
+            <th>Reise</th>
+            <th>Reisedetails</th>
+            <th>Reise bearbeiten</th>
+        </tr>
+        <tr>
+            <td>Reise 1</td>
+            <td>Reise 1 Details</td>
+            <td> <button type="button" onclick="">Bearbeiten</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Reise 2</td>
+            <td>Reise 2 Details</td>
+            <td> <button type="button" onclick="">Bearbeiten</button>
+            </td>
+        </tr>
+    </table>
+</div>
 
 
-    </body>
+</body>
 </html>
