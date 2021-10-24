@@ -8,7 +8,9 @@ body {
 }
 
 .center {
-    text-align: center;
+
+    display: flex;
+    justify-content: center;
     margin-bottom: 1em;
     margin-top: 1em;
 }
@@ -45,7 +47,9 @@ button {
 .navbar li:hover{
     background-color: black;
 }
-
+.reiseErsteller {
+    text-align:left ;
+}
 .aTabelle {
     border-collapse: collapse;
     width: 50%;
