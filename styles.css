@@ -49,6 +49,7 @@ button {
 .reiseTabelle table{
     border-collapse: collapse;
     width: 100%;
+    background-color: rgba(86, 224, 86, 0.63);
 }
 .reiseTabelle td,.reiseTabelle th{
     border: 1px solid black;
