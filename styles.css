@@ -46,16 +46,16 @@ button {
     background-color: black;
 }
 
-.reiseTabelle table{
+.aTabelle {
     border-collapse: collapse;
-    width: 100%;
+    width: 50%;
     background-color: rgba(86, 224, 86, 0.63);
 }
-.reiseTabelle td,.reiseTabelle th{
+.aTabelle{
     border: 1px solid black;
     padding: 8px;
 }
-.reiseTabelle th{
+.aTabelle th{
     background-color: darkcyan;
     text-align: left;
 }
