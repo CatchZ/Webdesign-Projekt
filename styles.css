@@ -1,7 +1,3 @@
-h1 {
-
-}
-
 body {
     background-color: rgba(125, 201, 125, 0.63);
     margin-bottom: 5em;
@@ -15,11 +11,14 @@ body {
 }
 
 button {
+    display:flex;
+    justify-content: center;
     background-color: rgba(103, 211, 103, 0.63);
     color:white;
     padding: 0.5em;
     border-color: rgba(58, 148, 58, 0.63);
     border-style: dot-dot-dash;
+
 }
 
 .grid-item-links {
