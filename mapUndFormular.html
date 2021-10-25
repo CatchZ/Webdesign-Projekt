@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Reisen Reisen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/rakete.svg">
+</head>
+
+<body>
+<div class = "center" >
+    <div class="header">
+        <h1>Reisen Reisen</h1>
+        <img src="images/rakete.svg" alt="Logo" width="50em">
+    </div>
+</div>
+
+<!--Navigationsbar-->
+<div class="navbar">
+    <nav>
+        <ul>
+            <li>Angebote</li>
+            <li>Reisen Reisen Reisewelt</li>
+            <li>Accountverwaltung</li>
+        </ul>
+    </nav>
+</div>
+
+
+<!--"interaktive" Weltkarte-->
+<div class="center">
+    <img src="images/map.jpg" alt="Weltkarte" width="60%"><!--usemap="WeltkarteMap" width="1300" height="649"-->
+
+    <!--<map name="WeltkarteMap">
+        <area shape="rect" coords="34,44,340,500" alt="Amerika">
+    </map>-->
+    <!--todo den button größer als die anderen-->
+
+</div>
+<div class="center">
+    <button type="button" onclick="">Neue Reise buchen</button>
+</div>
+<!--Eingabemaske fürs Reise Buchen toDo Fomular soll durch button verborgen sein-->
+<div class="center">
+    <!--todo die sind nicht aligned :-/-->
+    <div class ="reiseErsteller">
+        <h2>Neue Reise</h2>
+        <label for ="reisename">Name der Reise: </label>
+        <input type="text" id="reisename" required/>
+        <br><br>
+        <label for ="reiseziel">Reiseziel: </label>
+        <input type="text" id="reiseziel" required/>
+        <br><br>
+        <label for ="startdatum">Startdatum: </label>
+        <input type="date" id="startdatum" required/>
+        <br><br>
+        <label for ="enddatum">Reiseziel: </label>
+        <input type="date" id="enddatum" required/>
+        <br><br>
+        <button type="button" onclick="">Bestätigen</button>
+        <br><br>
+    </div>
+</div>
+
+</body>
+</html>
