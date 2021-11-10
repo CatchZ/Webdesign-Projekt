@@ -42,12 +42,15 @@ button {
     text-align: center;
 
 }
-.navbar li:hover{
+.navbar li:hover {
     background-color: black;
 }
 .reiseErsteller {
-    text-align:left ;
+    display:grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 10px;
 }
+
 .aTabelle {
     border-collapse: collapse;
     width: 50%;

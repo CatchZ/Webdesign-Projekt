@@ -18,6 +18,7 @@
     </div>
 </div>
 
+<!-- todo: die navbar auslagern, finde es voll nervig immer auf drei seiten aenderungen einzufuegen wenn sich was an der navbar aendert-->
 <!--Navigationsbar-->
 <div class="navbar">
     <nav>
@@ -56,22 +57,26 @@
 
 
 <!--Eingabemaske fürs Reise Buchen toDo Fomular soll durch button verborgen sein-->
-<div class="center">
-    <!--todo die sind nicht aligned :-/-->
-    <div class ="reiseErsteller">
+<div>
+    <div class="center">
         <h2>Neue Reise</h2>
-        <label for ="reisename">Name der Reise: </label>
-        <input type="text" id="reisename" required/>
-        <br><br>
-        <label for ="reiseziel">Reiseziel: </label>
-        <input type="text" id="reiseziel" required/>
-        <br><br>
-        <label for ="startdatum">Startdatum: </label>
-        <input type="date" id="startdatum" required/>
-        <br><br>
-        <label for ="enddatum">Reiseziel: </label>
-        <input type="date" id="enddatum" required/>
-        <br><br>
+    </div>
+    <div class="center">
+        <div class="reiseErsteller">
+            <label for="reisename">Name der Reise: </label>
+            <input type="text" id="reisename" required/>
+
+            <label for="reiseziel">Reiseziel: </label>
+            <input type="text" id="reiseziel" required/>
+
+            <label for="startdatum">Startdatum: </label>
+            <input type="date" id="startdatum" required/>
+
+            <label for="enddatum">Enddatum: </label>
+            <input type="date" id="enddatum" required/>
+        </div>
+    </div>
+    <div class="center">
         <button type="button" onclick="">Bestätigen</button>
         <br><br>
     </div>
