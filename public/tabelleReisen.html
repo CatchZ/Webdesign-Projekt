@@ -7,62 +7,73 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/rakete.svg">
 </head>
 
-<body>
-    <div class = "center" >
-        <div class="header">
-            <h1>Reisen Reisen</h1>
-            <div class="center">
-                <img src="images/rakete.svg" alt="Logo" width="50em">
-            </div>
+<body onload="displayLogOut()">
+
+<div class="center">
+    <div class="header">
+        <h1>Reisen Reisen</h1>
+        <div class="center">
+            <img src="images/rakete.svg" alt="Logo" width="50em">
         </div>
     </div>
+</div>
 
 
-    <!--Navigationsbar-->
-    <div class="navbar">
-        <nav>
-            <ul>
-                <li>
-                    <a href="mapUndFormular.html">Übersichtskarte</a></li>
-                <li>
-                    <a href="tabelleReisen.html">Reiseverzeichnis</a></li>
-                <li>Accountverwaltung</li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="center">
-        <button type="button"> <a href="mapUndFormular.html">Neue Reise buchen</a></button>
-    </div>
-
-
-    <!--Übersicht über gebuchte Reisen
-    toDo interaktion in bearbeitungsfeld-->
-    <!--todo die bearbeiten buttons sollten wohl kleiner sein-->
-    <div class = reiseTabelle>
-        <h1>Reiseübersicht</h1>
-        <!--tabellen passen sich irgendwie nicht an center an-->
-        <table>
-            <tr>
-                <th class="aTabelle">Reise</th>
-                <th class="aTabelle">Reisedetails</th>
-                <th></th>
-            </tr>
-            <tr>
-                <td class="aTabelle">Reise 1</td>
-                <td class="aTabelle">Reise 1 Details</td>
-                <td > <button type="button" onclick="">Bearbeiten</button>
-                </td>
-            </tr>
-            <tr>
-                <td class="aTabelle">Reise 2</td>
-                <td class="aTabelle">Reise 2 Details</td>
-                <td> <button type="button" onclick="">Bearbeiten</button>
-                </td>
-            </tr>
-        </table>
-    </div>
+<!--Navigationsbar-->
+<div class="navbar">
+    <nav>
+        <ul>
+            <li>
+                <p><a href="mapUndFormular.html">Übersichtskarte</a></p>
+            </li>
+            <li>
+                <p><a href="tabelleReisen.html">Reiseverzeichnis</a></p>
+            </li>
+            <li>
+                <p>Accountverwaltung</p>
+            </li>
+            <li>
+                <p id="loggedInUser"></p>
+            </li>
+        </ul>
+    </nav>
+</div>
 
 
+<div class="center">
+    <button type="button"><a href="mapUndFormular.html">Neue Reise buchen</a></button>
+</div>
+
+
+<!--Übersicht über gebuchte Reisen
+toDo interaktion in bearbeitungsfeld-->
+<!--todo die bearbeiten buttons sollten wohl kleiner sein-->
+<div class=reiseTabelle>
+    <h1>Reiseübersicht</h1>
+    <!--todo tabellen passen sich irgendwie nicht an center an-->
+    <table>
+        <tr>
+            <th class="aTabelle">Reise</th>
+            <th class="aTabelle">Reisedetails</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td class="aTabelle">Reise 1</td>
+            <td class="aTabelle">Reise 1 Details</td>
+            <td>
+                <button type="button" onclick="">Bearbeiten</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="aTabelle">Reise 2</td>
+            <td class="aTabelle">Reise 2 Details</td>
+            <td>
+                <button type="button" onclick="">Bearbeiten</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script src="js/logOut.js"></script>
 </body>
 </html>

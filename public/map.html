@@ -7,35 +7,45 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/rakete.svg">
 </head>
 
-<body>
-    <div class = "center" >
-        <div class="header">
-            <h1>Reisen Reisen</h1>
-            <div class="center">
-                <img src="images/rakete.svg" alt="Logo" width="50em">
-            </div>
+<body onload="displayLogOut()">
+
+<div class="center">
+    <div class="header">
+        <h1>Reisen Reisen</h1>
+        <div class="center">
+            <img src="images/rakete.svg" alt="Logo" width="50em">
         </div>
     </div>
+</div>
 
-    <!--Navigationsbar-->
-    <div class="navbar">
-        <nav>
-            <ul>
-                <li>
-                    <a href="mapUndFormular.html">Übersichtskarte</a></li>
-                <li>
-                    <a href="tabelleReisen.html">Reiseverzeichnis</a></li>
-                <li>Accountverwaltung</li>
-            </ul>
-        </nav>
-    </div>
+<!--Navigationsbar-->
+<div class="navbar">
+    <nav>
+        <ul>
+            <li>
+                <p><a href="mapUndFormular.html">Übersichtskarte</a></p>
+            </li>
+            <li>
+                <p><a href="tabelleReisen.html">Reiseverzeichnis</a></p>
+            </li>
+            <li>
+                <p>Accountverwaltung</p>
+            </li>
+            <li>
+                <p id="loggedInUser"></p>
+            </li>
+        </ul>
+    </nav>
+</div>
 
 
-    <!--"interaktive" Weltkarte-->
-    <div class="center">
-        <img src="images/map.jpg" alt="Weltkarte" width="60%"><!--usemap="WeltkarteMap" width="1300" height="649"-->
-    </div>
+<!--"interaktive" Weltkarte-->
+<div class="center">
+    <img src="images/map.jpg" alt="Weltkarte" width="60%"><!--usemap="WeltkarteMap" width="1300" height="649"-->
+</div>
 
+
+<script src="js/logOut.js"></script>
 
 </body>
 </html>
