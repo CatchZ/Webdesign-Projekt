@@ -63,3 +63,13 @@ button {
     text-align: left;
 }
 .reiseTabelle tr:hover{ background-color: rgba(86, 210, 86, 0.63); }
+
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*geht nicht, wahrscheinlich weil ul*/
+#loggedInUser {
+    text-align: right;
+}
