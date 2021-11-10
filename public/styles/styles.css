@@ -19,7 +19,6 @@ button {
     padding: 0.5em;
     border-color: rgba(58, 148, 58, 0.63);
     border-style: dot-dot-dash;
-
 }
 
 .grid-item-links {
@@ -69,7 +68,13 @@ a, a:visited {
     text-decoration: none;
 }
 
-/*geht nicht, wahrscheinlich weil ul*/
-#loggedInUser {
-    text-align: right;
+#logOutButton {
+    text-decoration: none;
+    display:inherit;
+    justify-content: inherit;
+    background-color: inherit;
+    color:inherit;
+    padding: inherit;
+    border-color: inherit;
+    border-style: none;
 }
