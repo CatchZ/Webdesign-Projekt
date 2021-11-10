@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
+
 <head>
     <meta charset="UTF-8">
     <title>Reisen Reisen</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="image/x-icon" href="public/images/rakete.svg">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/rakete.svg">
 </head>
 
 <body>
@@ -12,7 +13,7 @@
         <div class="header">
             <h1>Reisen Reisen</h1>
             <div class="center">
-                <img src="public/images/rakete.svg" alt="Logo" width="50em">
+                <img src="images/rakete.svg" alt="Logo" width="50em">
             </div>
         </div>
 
@@ -32,12 +33,15 @@
                     <label for="passwort"></label><input type="password" id="passwort" placeholder="Passwort" required/>
                 </div>
                 <div class="center">
-                    <button type="button"> <a href="mapUndFormular.html">Anmelden</a></button>
+                    <input type="button" value="Anmelden" onclick="logIn()">
                 </div>
             </form>
         </div>
+        <div class="center">
+            <p id="loginFailed"></p>
+        </div>
     </div>
 
-
+<script src="js/login.js"></script>
 </body>
 </html>
