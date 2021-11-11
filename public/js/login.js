@@ -11,7 +11,7 @@ function logIn() {
     let password = document.getElementById('passwort').value;
 
     if (username === user.username && password === user.password) {
-        window.location.replace("https://github.com/CatchZ/Webdesign-Projekt/blob/main/public/map.html");
+        window.location.replace("../map.html");
         localStorage.setItem("username", user.username);
         localStorage.setItem("password", user.password);
     } else {
