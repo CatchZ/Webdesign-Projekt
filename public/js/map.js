@@ -10,7 +10,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png	', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(mymap);
 
-const visitedCountries = ['DE', 'US', 'RU']; <!--"localStorage.getIteam('reiseziel')"-->
+const visitedCountries = ['DE', 'US', 'RU']; <!--"Json.parse(localStorage.getIteam('reiseziel'))"-->
 
 const loadData = async () => {
     const data = await fetch('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson');
@@ -32,8 +32,7 @@ displayData();
 
 function formularFilterSelection(){
     const newElem = document.getElementsByName("reiseziel").value;
-    visitedCountries.push(newElem)
-    localStorage.setItem(reiseziel,)
-    const obj = JSON.parse();
+    localStorage.setItem(reiseziel,newElem);
+    const obj = JSON.parse(localStorage.getItem("reiseziel"));
 
 }
