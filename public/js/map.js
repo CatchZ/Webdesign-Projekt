@@ -3,14 +3,14 @@
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossOrigin=""/>
 
-const mymap = L.map('map').setView([51.505, -0.09], 4);
+var mymap = L.map('map').setView([51.505, -0.09], 4);
 myStorage = localStorage;
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png	', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(mymap);
 
-const visitedCountries = ['DE', 'US', 'RU']; <!--"Json.parse(localStorage.getIteam('reiseziel'))"-->
+let visitedCountries = ['DE', 'US', 'RU']; <!--"localStorageSetUp()"-->
 
 const loadData = async () => {
     const data = await fetch('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson');
@@ -29,10 +29,18 @@ const displayData = async () => {
 
 displayData();
 
-
-function formularFilterSelection(){
+/*
+function FilterSelection(){
     const newElem = document.getElementsByName("reiseziel").value;
     localStorage.setItem(reiseziel,newElem);
     const obj = JSON.parse(localStorage.getItem("reiseziel"));
+    reiseziel  = JSON.parse(localStorage.getIteam('reiseziel');
 
 }
+function  localStorageSetUp(){
+    let x ="";
+    if(localStorage.hasOwnProperty("reiseziel") ){x = JSON.parse(localStorage.getIteam('reiseziel')}
+    else { "";}
+    return x
+}
+*/

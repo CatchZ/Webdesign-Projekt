@@ -5,9 +5,13 @@
     <title>Reisen Reisen</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/rakete.svg">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
 </head>
 
 <body onload="displayLogOut()">
+
 
 <div class="center">
     <div class="header">
@@ -15,6 +19,7 @@
 
         <div class="center">
             <img src="images/rakete.svg" alt="Logo" width="50em">
+            <div id="map"></div>
         </div>
     </div>
 </div>
