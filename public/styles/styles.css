@@ -81,7 +81,7 @@ a, a:visited {
     border-color: inherit;
     border-style: none;
 }
-.map {
+#map {
 
 width: 600px;
 height: 400px;
