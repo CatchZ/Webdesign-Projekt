@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossorigin=""/>
-    <script src="map.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossOrigin=""></script>
+    <script src="js/map.js"></script>
 </head>
 
 <body onload="displayLogOut()">
@@ -20,7 +23,7 @@
 
         <div class="center">
             <img src="images/rakete.svg" alt="Logo" width="50em">
-            <div id="map"></div>
+
         </div>
     </div>
 </div>
@@ -46,12 +49,11 @@
         <p id="loggedInUser"></p>
     </nav>
 </div>
-<div id="map">
 
-</div>
 
 <!--"interaktive" Weltkarte-->
 <div class="center">
+    <div id='map'></div>
     <img src="images/map.jpg" alt="Weltkarte" width="60%"><!--usemap="WeltkarteMap" width="1300" height="649"-->
 
     <!--<map name="WeltkarteMap">
