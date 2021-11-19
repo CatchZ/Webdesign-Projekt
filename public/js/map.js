@@ -46,7 +46,7 @@ displayData();
 function UpdateMap(){
    landHinzufuegen(document.getElementById("reiseziel").value);
    window.localStorage.setItem("TEST",document.getElementById("reiseziel").value);
-  geoMap(laender,mymap);
+ // geoMap(laender,mymap);
 }
 
 /**
