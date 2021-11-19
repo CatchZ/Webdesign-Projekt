@@ -6,8 +6,12 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/rakete.svg">
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
 
 </head>
 
@@ -23,38 +27,25 @@
     </div>
 </div>
 
-<!-- todo: die navbar auslagern, finde es voll nervig immer auf drei seiten aenderungen einzufuegen wenn sich was an der navbar aendert-->
 <!--Navigationsbar-->
 <div class="navbar">
-    <nav id ='navbar1' >
+    <nav id='navbar1'>
         <ul id='navliste'>
-          <!--  <li>
-                <p><a href="mapUndFormular.html">Übersichtskarte</a></p>
-            </li>
-            <li>
-                <p><a href="tabelleReisen.html">Reiseverzeichnis</a></p>
-            </li>
-            <li>
-                <p>Accountverwaltung</p>
-            </li>
-            <li>
-                <button id="logOutButton" onclick="logout()">Log out</button>
-            </li>-->
         </ul>
-       <!-- <p id="loggedInUser"></p>-->
     </nav>
 </div>
-<!--"interaktive" Weltkarte-->
+
+
+<!--interaktive Weltkarte-->
 <div class="center">
     <div id='map'></div>
-    <!--todo den button größer als die anderen-->
 </div>
 <div class="center">
     <button type="button" onclick="reiseErstellerAnzeigen()">Neue Reise buchen</button>
 </div>
 
 
-<!--Eingabemaske fürs Reise Buchen toDo Fomular soll durch button verborgen sein-->
+<!--Eingabemaske fürs Reise Buchen -->
 <div>
     <div class="center">
         <h2>Neue Reise</h2>
@@ -78,7 +69,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 
