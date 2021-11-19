@@ -6,11 +6,11 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png	', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(mymap);
 
-const laender = ['DE', 'US', 'RU'];
-laender.push(`FR`);
-window.localStorage.setItem("Laender",JSON.stringify(laender));
-const laender2 = JSON.parse(localStorage.getItem("Laender"));
-const visitedCountries =laender2;// /*testvar2;*/localStorageSetUp();
+let laender = ['DE', 'US', 'RU'];
+
+window.localStorage.setItem("laender",JSON.stringify(laender));
+landHinzufuegen('FR');
+const visitedCountries = JSON.parse(localStorage.getItem("laender"));
 
 const loadData = async () => {
     const data = await fetch('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson');
@@ -30,22 +30,54 @@ const displayData = async () => {
 displayData();
 
 
-/**
- * richtet Local Storage Variable reiseziel ein oder gibt aktuellen inhalt zurück
- * @returns {string}
- */
-function  localStorageSetUp(){
-  return ['DE', 'US', 'RU'];
-}
+
 
 /**
  * updated map mit Local Storage informationen
  * @constructor
  */
 function UpdateMap(){
-   var x=document.getElementById("reiseziel")
-   var y=  JSON.parse(window.localStorage.getItem("Laender"));
-   window.localStorage.removeItem("Laender");
-   y.push(x);
-   window.localStorage.setItem("Laender",JSON.parse(y));
+   landHinzufuegen(document.getElementById("reiseziel").value);
+   window.localStorage.setItem("TEST",document.getElementById("reiseziel").value);
+}
+
+/**
+ * updatet laender Array aus localstorage um gewünschtes Land
+ * @param land
+ */
+function landHinzufuegen(land){
+    let temp =  JSON.parse(window.localStorage.getItem("laender"));
+    temp.push(land);
+   updateStorage("laender",temp);
+}
+
+/**
+ *
+ * @param key variable die geupdatet werden soll
+ * @param data
+ */
+function updateStorage(key,data){
+    window.localStorage.removeItem(key);
+    window.localStorage.setItem(key,JSON.stringify(data));
+}
+
+/**
+ * entfernt land anstelle x beginnend ab 1
+ * @param index
+ */
+function landEntfernen(index){
+    let temp =  JSON.parse(window.localStorage.getItem("laender"));
+    temp.splice(index-1,1);//korrektur für array beginnend null
+    updateStorage("laender",temp);
+
+}
+
+/**
+ * ersetzt land an stelle x beginnend mit 1
+ * @param index
+ * @param land
+ */
+function landAendern(index,land){
+    let temp =  JSON.parse(window.localStorage.getItem("laender"));
+    temp[index-1]=land;
 }
