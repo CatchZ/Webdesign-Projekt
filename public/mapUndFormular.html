@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
 </head>
 
 <body onload="displayLogOut()">
@@ -25,9 +26,9 @@
 <!-- todo: die navbar auslagern, finde es voll nervig immer auf drei seiten aenderungen einzufuegen wenn sich was an der navbar aendert-->
 <!--Navigationsbar-->
 <div class="navbar">
-    <nav>
-        <ul>
-            <li>
+    <nav id ='navbar1' >
+        <ul id='navliste'>
+          <!--  <li>
                 <p><a href="mapUndFormular.html">Übersichtskarte</a></p>
             </li>
             <li>
@@ -38,9 +39,9 @@
             </li>
             <li>
                 <button id="logOutButton" onclick="logout()">Log out</button>
-            </li>
+            </li>-->
         </ul>
-        <p id="loggedInUser"></p>
+       <!-- <p id="loggedInUser"></p>-->
     </nav>
 </div>
 <!--"interaktive" Weltkarte-->
@@ -49,7 +50,7 @@
     <!--todo den button größer als die anderen-->
 </div>
 <div class="center">
-    <button type="button" onclick="">Neue Reise buchen</button>
+    <button type="button" onclick="reiseErstellerAnzeigen()">Neue Reise buchen</button>
 </div>
 
 
@@ -71,17 +72,20 @@
 
             <label for="enddatum">Enddatum: </label>
             <input type="date" id="enddatum" required/>
+            <div class="center">
+                <button type="button" onclick="UpdateMap">Bestätigen</button>
+                <br><br>
+            </div>
         </div>
     </div>
-    <div class="center">
-        <button type="button" onclick="UpdateMap">Bestätigen</button>
-        <br><br>
-    </div>
+
 </div>
 
 
 <script src="js/logOut.js"></script>
 <script src="js/map.js"></script>
-
+<script src="js/htmlEdit.js"></script>
+<script src="js/navBar.js"></script>
+<script src="js/logOut.js"></script>
 </body>
 </html>
