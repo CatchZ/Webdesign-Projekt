@@ -1,12 +1,18 @@
 
-var mymap = L.map('map').setView([51.505, -0.09], 4);
-myStorage = localStorage;
 
+let laender = ['DE', 'US', 'RU'];
+
+
+let mymap = L.map('map').setView([51.505, -0.09], 4);
+
+myStorage = localStorage;
+geoMap(laender,mymap);
+
+function geoMap(laender,mymap) {
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png	', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(mymap);
 
-let laender = ['DE', 'US', 'RU'];
 
 window.localStorage.setItem("laender",JSON.stringify(laender));
 landHinzufuegen('FR');
@@ -17,6 +23,7 @@ const loadData = async () => {
     return data.json();
 }
 // dynamisch gemacht
+
 const displayData = async () => {
     const geoJson = await loadData();
     const filteredData = {
@@ -28,7 +35,7 @@ const displayData = async () => {
 }
 
 displayData();
-
+}
 
 
 
@@ -39,6 +46,7 @@ displayData();
 function UpdateMap(){
    landHinzufuegen(document.getElementById("reiseziel").value);
    window.localStorage.setItem("TEST",document.getElementById("reiseziel").value);
+ //  geoMap(laender,mymap);
 }
 
 /**
