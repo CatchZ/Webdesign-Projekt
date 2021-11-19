@@ -1,3 +1,4 @@
+tabelle reisen
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -21,25 +22,24 @@
 
 <!--Navigationsbar-->
 <div class="navbar">
-    <nav id="navbar1">
-        <ul id = "navliste">
-         <!--   <li>
-                <p><a href="mapUndFormular.html">Übersichtskarte</a></p>
-            </li>
-            <li>
-                <p><a href="tabelleReisen.html">Reiseverzeichnis</a></p>
-            </li>
-            <li>
-                <p>Accountverwaltung</p>
-            </li>
-            <li>
-                <button id="logOutButton" onclick="logout()">Log out</button>
-            </li>-->
+    <nav id ='navbar1' >
+        <ul id='navliste'>
+            <!--  <li>
+                  <p><a href="mapUndFormular.html">Übersichtskarte</a></p>
+              </li>
+              <li>
+                  <p><a href="tabelleReisen.html">Reiseverzeichnis</a></p>
+              </li>
+              <li>
+                  <p>Accountverwaltung</p>
+              </li>
+              <li>
+                  <button id="logOutButton" onclick="logout()">Log out</button>
+              </li>-->
         </ul>
-      <!--  <p id="loggedInUser"></p> -->
+        <!-- <p id="loggedInUser"></p>-->
     </nav>
 </div>
-
 
 <div class="center">
     <button type="button"><a href="mapUndFormular.html">Neue Reise buchen</a></button>
@@ -52,22 +52,29 @@ toDo interaktion in bearbeitungsfeld-->
     <h1>Reiseübersicht</h1>
     <table>
         <tr>
-            <th class="aTabelle">Reise</th>
-            <th class="aTabelle">Reisedetails</th>
+            <th class="aTabelle">Reisename</th>
+            <th class="aTabelle">Reiseziel</th>
+            <th class="aTabelle">Startdatum</th>
+            <th class="aTabelle">Enddatum</th>
             <th></th>
         </tr>
         <tr>
-            <td class="aTabelle">Reise 1</td>
-            <td class="aTabelle">Reise 1 Details</td>
+            <td class="aTabelle" contenteditable="true">Bsp. Thailandreise</td>
+            <td class="aTabelle" contenteditable="true">Thailand</td>
+            <td class="aTabelle" contenteditable="true">13.08.2022</td>
+            <td class="aTabelle" contenteditable="true">24.08.2022</td>
+
             <td>
-                <button type="button" onclick="">Bearbeiten</button>
+                <button type="button" onclick="">Löschen</button>
             </td>
         </tr>
         <tr>
-            <td class="aTabelle">Reise 2</td>
-            <td class="aTabelle">Reise 2 Details</td>
+            <td class="aTabelle" contenteditable="true">Bsp. Party in Prague</td>
+            <td class="aTabelle" contenteditable="true">Tschechien</td>
+            <td class="aTabelle" contenteditable="true">01.07.2021</td>
+            <td class="aTabelle" contenteditable="true">04.07.2021</td>
             <td>
-                <button type="button" onclick="">Bearbeiten</button>
+                <button type="button" onclick="">Löschen</button>
             </td>
         </tr>
     </table>
@@ -75,5 +82,7 @@ toDo interaktion in bearbeitungsfeld-->
 
 <script src="js/logOut.js"></script>
 <script src="js/navBar.js"></script>
+
 </body>
 </html>
+
