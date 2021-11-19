@@ -2,15 +2,17 @@
  * Array mit ländern die nict auf der map dargestellt werden sollen
  * @type {string[]}
  */
-let laender = ['DE', 'US', 'RU'];
+let laender =[];// ["DE", "US", "RU"];
 window.localStorage.setItem("laender",JSON.stringify(laender));
 
+/**
+ * Kartenobjekt
+ */
+let mymap = L.map('map').setView([51.505, -0.09], 4);
+geoMap(mymap);
 
+function geoMap(mymap) {
 
-geoMap();
-
-function geoMap() {
-    let mymap = L.map('map').setView([51.505, -0.09], 4);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png	', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     } ).addTo(mymap);
@@ -47,7 +49,10 @@ displayData();
 function UpdateMap(){
    landHinzufuegen(document.getElementById("reiseziel").value);
    window.localStorage.setItem("TEST",document.getElementById("reiseziel").value);
-  geoMap();
+  mymap.off();
+  mymap.remove();
+  mymap = L.map('map').setView([51.505, -0.09], 4);
+   geoMap(mymap);
 }
 
 /**
