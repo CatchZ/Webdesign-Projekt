@@ -5,17 +5,17 @@
 let laender = ['DE', 'US', 'RU'];
 window.localStorage.setItem("laender",JSON.stringify(laender));
 
-let mymap = L.map('map').setView([51.505, -0.09], 4);
 
-myStorage = localStorage;
-geoMap(mymap);
 
-function geoMap(mymap) {
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png	', {
+geoMap();
+
+function geoMap() {
+    let mymap = L.map('map').setView([51.505, -0.09], 4);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png	', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(mymap);
+    } ).addTo(mymap);
 
-const visitedCountries = JSON.parse(localStorage.getItem("laender"));
+let visitedCountries = JSON.parse(localStorage.getItem("laender"));
 
 const loadData = async () => {
     const data = await fetch('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson');
@@ -34,7 +34,7 @@ const displayData = async () => {
 }
 
 displayData();
-//document.getElementById("reiseziel").addEventListener("click",)
+
 
 }
 
@@ -47,7 +47,7 @@ displayData();
 function UpdateMap(){
    landHinzufuegen(document.getElementById("reiseziel").value);
    window.localStorage.setItem("TEST",document.getElementById("reiseziel").value);
-  geoMap(mymap);
+  geoMap();
 }
 
 /**
