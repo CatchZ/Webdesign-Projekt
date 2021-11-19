@@ -42,7 +42,7 @@ function  localStorageSetUp(){
  * updated map mit Local Storage informationen
  * @constructor
  */
-function UpdateMap(){
+function updateMap(){
    var x=document.getElementById("reiseziel")
    var y=  JSON.parse(window.localStorage.getItem("Laender"));
    window.localStorage.removeItem("Laender");

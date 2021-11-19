@@ -64,8 +64,10 @@
             <label for="enddatum">Enddatum: </label>
             <input type="date" id="enddatum" required/>
             <div class="center">
-                <button type="button" onclick="UpdateMap()">Bestätigen</button>
+                <button type="button" onclick="
+                addReise(document.getElementById('reisename').value, document.getElementById('reiseziel').value, document.getElementById('startdatum').value,document.getElementById('enddatum').value)                ">Bestätigen</button>
                 <br><br>
+                <p id="testForm">Aktualisieren</p>
             </div>
         </div>
     </div>
@@ -77,5 +79,9 @@
 <script src="js/htmlEdit.js"></script>
 <script src="js/navBar.js"></script>
 <script src="js/logOut.js"></script>
+<script src="js/bookNew.js"></script>
+<script src="js/showReisen.js"></script>
+
+
 </body>
 </html>
