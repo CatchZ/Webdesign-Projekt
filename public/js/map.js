@@ -34,8 +34,8 @@ const displayData = async () => {
 }
 
 displayData();
-document.getElementById("reiseziel").addEventListener("click",)
-    this.
+//document.getElementById("reiseziel").addEventListener("click",)
+
 }
 
 
