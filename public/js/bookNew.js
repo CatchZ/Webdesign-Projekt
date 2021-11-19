@@ -39,8 +39,8 @@ function myFunction(){
 
     document.getElementById("testForm").innerHTML = getReise[getReise.length-1].reisename;
 
-
 }
+
 /*
 function myFunction() {
 var table = document.getElementById("tabelleReiseuebersicht");

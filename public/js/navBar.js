@@ -6,7 +6,6 @@ let a = document.createElement('a');
 let b = document.createElement("button");
 
 
-
 appendChilds('Übersichtskarte',"mapUndFormular.html");
 appendChilds('Reiseverzeichnis',"tabelleReisen.html");
 appendChilds('Accountverwaltung',"");
