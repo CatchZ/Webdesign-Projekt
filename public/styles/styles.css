@@ -1,7 +1,6 @@
 body {
     background-color: rgba(125, 201, 125, 0.63);
     margin-bottom: 5em;
-
 }
 
 .center {
@@ -26,25 +25,26 @@ button {
     margin-right: 40px;
 }
 
-.navbar ul{
+.navbar ul {
     list-style-type:none;
     margin:0;
     padding:0;
     overflow: hidden;
     background-color: darkcyan;
-
 }
+
 .navbar li {
     float: left;
     color: white;
     display: block;
     padding: 14px 16px;
     text-align: center;
-
 }
+
 .navbar li:hover {
     background-color: black;
 }
+
 .reiseErsteller {
     display:grid;
     grid-template-columns: max-content max-content;
@@ -56,15 +56,20 @@ button {
     width: 50%;
     background-color: rgba(86, 224, 86, 0.63);
 }
-.aTabelle{
+
+.aTabelle {
     border: 1px solid black;
     padding: 8px;
 }
-.aTabelle th{
+
+.aTabelle th {
     background-color: darkcyan;
     text-align: left;
 }
-.reiseTabelle tr:hover{ background-color: rgba(86, 210, 86, 0.63); }
+
+.reiseTabelle tr:hover {
+    background-color: rgba(86, 210, 86, 0.63);
+}
 
 a, a:visited {
     color: inherit;
@@ -81,8 +86,8 @@ a, a:visited {
     border-color: inherit;
     border-style: none;
 }
-#map {
 
+#map {
 width: 600px;
 height: 400px;
 }

@@ -44,9 +44,8 @@
     <button type="button" onclick="reiseErstellerAnzeigen()">Neue Reise buchen</button>
 </div>
 
-
 <!--Eingabemaske fürs Reise Buchen -->
-<div>
+<div class="ausklappMenu">
     <div class="center">
         <h2>Neue Reise</h2>
     </div>
@@ -63,14 +62,16 @@
 
             <label for="enddatum">Enddatum: </label>
             <input type="date" id="enddatum" required/>
-            <div class="center">
-                <button type="button" onclick="
-                addReise(document.getElementById('reisename').value, document.getElementById('reiseziel').value, document.getElementById('startdatum').value,document.getElementById('enddatum').value);
-                showReisen()
-                     ">Bestätigen</button>
-                <br><br>
-            </div>
+
+            <br>
         </div>
+    </div>
+    <div class="center">
+        <button type="button" onclick="
+            addReise(document.getElementById('reisename').value, document.getElementById('reiseziel').value, document.getElementById('startdatum').value,document.getElementById('enddatum').value)
+                 ">Bestätigen
+        </button>
+        <br><br>
     </div>
 </div>
 

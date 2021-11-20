@@ -1,4 +1,4 @@
-let hideReiseErsteller = document.querySelector('.reiseErsteller');
+let hideReiseErsteller = document.querySelector('.ausklappMenu');
 hideReiseErsteller.style.display='none';
 function reiseErstellerAnzeigen (){
     hideReiseErsteller.style.display='';

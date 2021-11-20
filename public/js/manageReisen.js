@@ -35,7 +35,7 @@ function reiseLoeschen(r) {
     var reisenAlt = JSON.parse(localStorage.getItem('reisenArray')) || [];
 
     x-=1;
-    alert(reisenAlt[x].reisename);
+    alert("Reise " + reisenAlt[x].reisename + " wurde gelöscht.");
 
     reisenAlt.splice(x,1);
 
@@ -57,9 +57,12 @@ function reiseAktualisieren(r){
         'reiseende': document.getElementById("tabelleReiseuebersicht").rows[x].cells[3].innerHTML
     };
 
+    var reisenameAlt = reisenAlt[x-1].reisename;
+
     reisenAlt[x-1] = updatedReise;
     localStorage.setItem('reisenArray', JSON.stringify(reisenAlt));
 
+    alert("Reise " + reisenameAlt + " wurde aktualisiert.");
 
 }
 
