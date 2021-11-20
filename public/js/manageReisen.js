@@ -30,7 +30,9 @@ function reiseLoeschen(r) {
     //löscht aus dem localStorage
     var reisenAlt = JSON.parse(localStorage.getItem('reisenArray')) || [];
 
-    x-=2;
+    x-=1;
+    alert(reisenAlt[x].reisename);
+
     reisenAlt.splice(x,1);
 
     localStorage.setItem('reisenArray', JSON.stringify(reisenAlt));
