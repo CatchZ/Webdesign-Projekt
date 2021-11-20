@@ -1,21 +1,33 @@
 var addReise = function (name, ziel, start, ende) {
-    document.getElementById("addReiseFeedback").innerHTML = "Neue Reise hinzugefügt!";
 
-    var alleReisen = JSON.parse(localStorage.getItem('reisenArray')) || [];
+    var startdatum = new Date(start);
+    var enddatum = new Date(ende);
 
-    var neueReise = {
-        'reisename': name,
-        'reiseziel': ziel,
-        'reisestart': start,
-        'reiseende': ende
-    };
+    if (startdatum.getTime() > enddatum.getTime()) {
+        alert("Enddatum muss nach Startdatum liegen!");
+    }
 
-    alleReisen.push(neueReise);
+    else {
 
-    localStorage.setItem('reisenArray', JSON.stringify(alleReisen));
+        document.getElementById("addReiseFeedback").innerHTML = "Neue Reise hinzugefügt!";
 
-    //document.getElementById("testForm").innerHTML = localStorage.getItem('reisenArray');
-    myFunction();
+        var alleReisen = JSON.parse(localStorage.getItem('reisenArray')) || [];
+
+        var neueReise = {
+            'reisename': name,
+            'reiseziel': ziel,
+            'reisestart': start,
+            'reiseende': ende
+        };
+
+        alleReisen.push(neueReise);
+
+        localStorage.setItem('reisenArray', JSON.stringify(alleReisen));
+
+        //document.getElementById("testForm").innerHTML = localStorage.getItem('reisenArray');
+        myFunction();
+    }
+
 };
 
 function myFunction(){
