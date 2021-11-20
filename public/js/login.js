@@ -11,7 +11,7 @@ function logIn() {
     let password = document.getElementById('passwort').value;
 
     if (username === user.username && password === user.password) {
-        window.location.replace("../map.html");
+        window.location.replace("../public/map.html");
         localStorage.setItem("username", user.username);
         localStorage.setItem("password", user.password);
     } else {

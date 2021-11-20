@@ -1,12 +1,12 @@
 var getReise = JSON.parse(localStorage.getItem('reisenArray'));
-//var btnReiseLoeschen = document.createElement('button');
+//var btnReiseLoeschen = document.createElement('button'); idk
 
 function showReisen() {
     var table = document.getElementById("tabelleReiseuebersicht");
 
     for (let i=0; i<=getReise.length;i++) {
     //for (let i=getReise.length-1; i>0;i--) {
-        //var btnTest =  document.createElement('button');
+        //var btnTest =  document.createElement('button'); keine ahnung mehr wofür ich das geschrieben hatte
         //btnTest.setAttribute('onclick','myFunction');
 
         var row = table.insertRow(-1);
@@ -31,29 +31,14 @@ function reiseLoeschen(r) {
     var x = r.parentNode.parentNode.rowIndex;
     document.getElementById("tabelleReiseuebersicht").deleteRow(x);
 
-    //also ich hab hier den rowIndex... damit müsste man doch arbeiten können...
-    //irgendwie... den rowindex nutzen, um den reisenamen in der reihe zu bekommen...
+    var reisenAlt = JSON.parse(localStorage.getItem('reisenArray')) || [];
 
-    //localStorage.removeItem(getReise[x]);
+    x-=2;
+    reisenAlt.splice(x,1);
 
-    var reisenString = JSON.stringify(localStorage.getItem('reisenArray'));
-    alert(reisenString);
-    //jetzt muss man aus dem String denke ich das item rausnehmen, und dann wieder in json umwandeln?
+    localStorage.setItem('reisenArray', JSON.stringify(reisenAlt));
 
-
-
-    /*
-    var reisen = JSON.parse(localStorage.getItem('reisenArray'));
-
-    for (var j=0; j<reisen.length; j++) {
-        var reisen = JSON.parse(reisen[i]);
-        if (reisen.reisename === reisename) {
-            reisen.splice(j, 1);
-        }
-    }
-    reisen = JSON.stringify(reisen); //Restoring object left into items again
-    localStorage.setItem("reisenArray", reisen);
-     */
+    var reisenArray = JSON.stringify(localStorage.getItem('reisenArray'));
 
 }
 

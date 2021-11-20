@@ -12,7 +12,7 @@ appendChilds('Accountverwaltung',"");
 b.setAttribute("LogOutButton","logout()")
 b.innerHTML="Log out";
 b.id='logOutButton';
-//b.onclick=function (){logout();};
+b.onclick=function (){logout();};
 main.appendChild(li);
 li.appendChild(b);
 p1.id="loggedInUser";
