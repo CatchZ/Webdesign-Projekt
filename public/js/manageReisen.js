@@ -46,6 +46,21 @@ function reiseLoeschen(r) {
 
 function reiseAktualisieren(r){
     //soll neue Daten aufnehmen und speichern
+    var x = r.parentNode.parentNode.rowIndex;
+    var reisenAlt = JSON.parse(localStorage.getItem('reisenArray')) || [];
+
+
+    var updatedReise = {
+        'reisename': document.getElementById("tabelleReiseuebersicht").rows[x].cells[0].innerHTML,
+        'reiseziel': document.getElementById("tabelleReiseuebersicht").rows[x].cells[1].innerHTML,
+        'reisestart': document.getElementById("tabelleReiseuebersicht").rows[x].cells[2].innerHTML,
+        'reiseende': document.getElementById("tabelleReiseuebersicht").rows[x].cells[3].innerHTML
+    };
+
+    reisenAlt[x-1] = updatedReise;
+    localStorage.setItem('reisenArray', JSON.stringify(reisenAlt));
+
+
 }
 
 
