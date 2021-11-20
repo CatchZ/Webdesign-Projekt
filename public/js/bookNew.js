@@ -1,4 +1,6 @@
 var addReise = function (name, ziel, start, ende) {
+    document.getElementById("addReiseFeedback").innerHTML = "Neue Reise hinzugefügt!";
+
     var alleReisen = JSON.parse(localStorage.getItem('reisenArray')) || [];
 
     var neueReise = {
@@ -12,7 +14,7 @@ var addReise = function (name, ziel, start, ende) {
 
     localStorage.setItem('reisenArray', JSON.stringify(alleReisen));
 
-    document.getElementById("testForm").innerHTML = localStorage.getItem('reisenArray');
+    //document.getElementById("testForm").innerHTML = localStorage.getItem('reisenArray');
     myFunction();
 };
 
@@ -20,7 +22,3 @@ function myFunction(){
     var getReise = JSON.parse(localStorage.getItem('reisenArray'));
    // document.getElementById("testForm").innerHTML = getReise[getReise.length-1].reisename;
 }
-
-/*
-
- */
