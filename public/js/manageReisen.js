@@ -5,10 +5,6 @@ function showReisen() {
     var table = document.getElementById("tabelleReiseuebersicht");
 
     for (let i=0; i<=getReise.length;i++) {
-    //for (let i=getReise.length-1; i>0;i--) {
-        //var btnTest =  document.createElement('button'); keine ahnung mehr wofür ich das geschrieben hatte
-        //btnTest.setAttribute('onclick','myFunction');
-
         var row = table.insertRow(-1);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
@@ -17,15 +13,12 @@ function showReisen() {
         var cell5 = row.insertCell(4);
         var cell6 = row.insertCell(5);
 
-        //cell1.innerHTML = '<p id="pReisename" contenteditable="true"></p>';
         cell1.innerHTML = getReise[i].reisename;
-
-        // document.getElementById("pReisename").innerHTML = getReise[i].reisename;
         cell2.innerHTML = getReise[i].reiseziel;
         cell3.innerHTML = getReise[i].reisestart;
         cell4.innerHTML = getReise[i].reiseende;
-        cell5.innerHTML = '<button type="button" onclick="reiseAktualisieren(this)">Aktualisieren</button>';
-        cell6.innerHTML = '<button type="button" onclick="reiseLoeschen(this)">Löschen</button>';
+        //cell5.innerHTML = '<button type="button" onclick="reiseAktualisieren(this)">Aktualisieren</button>';
+        cell5.innerHTML = '<button type="button" onclick="reiseLoeschen(this)">Löschen</button>';
     }
 }
 
