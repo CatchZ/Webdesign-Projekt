@@ -27,11 +27,21 @@ function showReisen() {
     }
 }
 
-function reiseLoeschen(r, reisename) {
+function reiseLoeschen(r) {
     var x = r.parentNode.parentNode.rowIndex;
     document.getElementById("tabelleReiseuebersicht").deleteRow(x);
 
-    localStorage.removeItem(reisename);
+    //also ich hab hier den rowIndex... damit müsste man doch arbeiten können...
+    //irgendwie... den rowindex nutzen, um den reisenamen in der reihe zu bekommen...
+
+    //localStorage.removeItem(getReise[x]);
+
+    var reisenString = JSON.stringify(localStorage.getItem('reisenArray'));
+    alert(reisenString);
+    //jetzt muss man aus dem String denke ich das item rausnehmen, und dann wieder in json umwandeln?
+
+
+
     /*
     var reisen = JSON.parse(localStorage.getItem('reisenArray'));
 
