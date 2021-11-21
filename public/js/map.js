@@ -1,22 +1,30 @@
+/**
+ * Array mit ländern die nict auf der map dargestellt werden sollen
+ * @type {string[]}
+ */
+let laender =[];// ["DE", "US", "RU"];
+window.localStorage.setItem("laender",JSON.stringify(laender));
 
-var mymap = L.map('map').setView([51.505, -0.09], 4);
-myStorage = localStorage;
+/**
+ * Kartenobjekt
+ */
+let mymap = L.map('map').setView([51.505, -0.09], 4);
+geoMap(mymap);
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png	', {
+function geoMap(mymap) {
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png	', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(mymap);
+    } ).addTo(mymap);
 
-const laender = ['DE', 'US', 'RU'];
-laender.push(`FR`);
-window.localStorage.setItem("Laender",JSON.stringify(laender));
-const laender2 = JSON.parse(localStorage.getItem("Laender"));
-const visitedCountries =laender2;// /*testvar2;*/localStorageSetUp();
+let visitedCountries = JSON.parse(localStorage.getItem("laender"));
 
 const loadData = async () => {
     const data = await fetch('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson');
     return data.json();
 }
 // dynamisch gemacht
+
 const displayData = async () => {
     const geoJson = await loadData();
     const filteredData = {
@@ -30,22 +38,60 @@ const displayData = async () => {
 displayData();
 
 
-/**
- * richtet Local Storage Variable reiseziel ein oder gibt aktuellen inhalt zurück
- * @returns {string}
- */
-function  localStorageSetUp(){
-  return ['DE', 'US', 'RU'];
 }
+
+
 
 /**
  * updated map mit Local Storage informationen
  * @constructor
  */
-function updateMap(){
-   var x=document.getElementById("reiseziel")
-   var y=  JSON.parse(window.localStorage.getItem("Laender"));
-   window.localStorage.removeItem("Laender");
-   y.push(x);
-   window.localStorage.setItem("Laender",JSON.parse(y));
+function UpdateMap(){
+   landHinzufuegen(document.getElementById("reiseziel").value);
+   window.localStorage.setItem("TEST",document.getElementById("reiseziel").value);
+  mymap.off();
+  mymap.remove();
+  mymap = L.map('map').setView([51.505, -0.09], 4);
+   geoMap(mymap);
+}
+
+/**
+ * updatet laender Array aus localstorage um gewünschtes Land
+ * @param land
+ */
+function landHinzufuegen(land){
+    let temp =  JSON.parse(window.localStorage.getItem("laender"));
+    temp.push(land);
+   updateStorage("laender",temp);
+}
+
+/**
+ *
+ * @param key variable die geupdatet werden soll
+ * @param data
+ */
+function updateStorage(key,data){
+    window.localStorage.removeItem(key);
+    window.localStorage.setItem(key,JSON.stringify(data));
+}
+
+/**
+ * entfernt land anstelle x beginnend ab 1
+ * @param index
+ */
+function landEntfernen(index){
+    let temp =  JSON.parse(window.localStorage.getItem("laender"));
+    temp.splice(index-1,1);//korrektur für array beginnend null
+    updateStorage("laender",temp);
+
+}
+
+/**
+ * ersetzt land an stelle x beginnend mit 1
+ * @param index
+ * @param land
+ */
+function landAendern(index,land){
+    let temp =  JSON.parse(window.localStorage.getItem("laender"));
+    temp[index-1]=land;
 }
