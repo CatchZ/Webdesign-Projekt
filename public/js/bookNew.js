@@ -1,5 +1,4 @@
 var addReise = function (name, ziel, start, ende) {
-
     var startdatum = new Date(start);
     var enddatum = new Date(ende);
 
