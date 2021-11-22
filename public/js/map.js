@@ -2,8 +2,10 @@
  * Array mit ländern die nict auf der map dargestellt werden sollen
  * @type {string[]}
  */
-let laender =[];// ["DE", "US", "RU"];
-window.localStorage.setItem("laender",JSON.stringify(laender));
+if("laender" in localStorage) {}
+else{
+let laender =[];
+window.localStorage.setItem("laender",JSON.stringify(laender));}
 
 /**
  * Kartenobjekt
