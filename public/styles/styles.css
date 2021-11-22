@@ -10,11 +10,11 @@ body {
     margin-top: 1em;
 }
 
-button,#reiseformularsubmit {
-    display:flex;
+button, #reiseformularsubmit {
+    display: flex;
     justify-content: center;
     background-color: rgba(103, 211, 103, 0.63);
-    color:white;
+    color: white;
     padding: 0.5em;
     border-color: rgba(58, 148, 58, 0.63);
     border-style: dot-dot-dash;
@@ -26,9 +26,9 @@ button,#reiseformularsubmit {
 }
 
 .navbar ul {
-    list-style-type:none;
-    margin:0;
-    padding:0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
     background-color: darkcyan;
 }
@@ -46,7 +46,7 @@ button,#reiseformularsubmit {
 }
 
 .reiseErsteller {
-    display:grid;
+    display: grid;
     grid-template-columns: max-content max-content;
     grid-gap: 10px;
 }
@@ -78,16 +78,16 @@ a, a:visited {
 
 #logOutButton {
     text-decoration: none;
-    display:inherit;
+    display: inherit;
     justify-content: inherit;
     background-color: inherit;
-    color:inherit;
+    color: inherit;
     padding: inherit;
     border-color: inherit;
     border-style: none;
 }
 
 #map {
-width: 600px;
-height: 400px;
+    width: 600px;
+    height: 400px;
 }
