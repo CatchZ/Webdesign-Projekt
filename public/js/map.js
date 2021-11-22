@@ -14,28 +14,34 @@ request.onload=function (){
 }
 
  */
-
-const dataJ = fetch("./js/LaenderData.json").then(result => result.json());
- //x = JSON.parse(LaenderDaten);
-laenderlisteErsteller(dataJ);
-function laenderlisteErsteller (x){
-    let main = document.querySelector("#reiseziel");
-    let o;
-    let i;
-    o =document.createElement('option');
-    o.setAttribute('value',"test");
-    o.innerText=JSON.stringify(x[1]["Code"]);
-    main.appendChild(o)
-    for (i=0;i===160;i++){
-        o =document.createElement('option');
-        o.setAttribute('value',x[i]["Code"]);
-        o.innerText=x.name[i][["Code"]];
-        main.appendChild(o)
-
-    }
-
+const loadLeander =async ()=>
+{
+    const dataJ = await
+        fetch("./js/LaenderData.json")
+    return dataJ.json();
 }
+
+
 laenderlisteErsteller();
+
+async function laenderlisteErsteller (){
+
+    const dataJ2 = await loadLeander();
+    window.localStorage.setItem("TEEEST",JSON.stringify(dataJ2));
+
+    for (let i=0;i<=248;i++){
+        let main = document.querySelector("#reiseziel");
+        let p;
+
+        p=document.createElement('option');
+        p.setAttribute('value',dataJ2[i]["Code"]);
+        p.innerText=dataJ2[i][["Name"]];
+        main.appendChild(p);
+    }
+   }
+
+
+
 
 if("laender" in localStorage) {}
 else{
