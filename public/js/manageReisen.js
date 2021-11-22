@@ -63,5 +63,3 @@ function reiseAktualisieren(r){
 
     alert("Reise " + reisenameAlt + " wurde aktualisiert.");
 }
-
-
