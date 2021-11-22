@@ -24,7 +24,6 @@ var addReise = function (name, ziel, start, ende) {
         //document.getElementById("testForm").innerHTML = localStorage.getItem('reisenArray');
         myFunction();
     }
-
 };
 
 function myFunction(){
