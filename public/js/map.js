@@ -1,18 +1,8 @@
 /*const dataGEO = async () => {
     const data = await fetch("https://datahub.io/core/country-list/r/0.html");
-    return data.json()}
-
- /*
-const requestURL = "https://datahub.io/core/country-list/r/0.html";
-const request =new XMLHttpRequest();
-request.open('GET',requestURL);
-request.responseType= 'json';
-request.send();
-request.onload=function (){
-    const test =request.response;
-    laenderlisteErsteller(test);
-}
-
+    return data.json()}*/
+/**
+läd locales Jason
  */
 const loadLeander =async ()=>
 {
@@ -23,11 +13,12 @@ const loadLeander =async ()=>
 
 
 laenderlisteErsteller();
-
+/**
+erstellt Länderliste für Selector im reisebuchenformuar
+ */
 async function laenderlisteErsteller (){
 
     const dataJ2 = await loadLeander();
-    window.localStorage.setItem("TEEEST",JSON.stringify(dataJ2));
 
     for (let i=0;i<=248;i++){
         let main = document.querySelector("#reiseziel");
@@ -40,20 +31,13 @@ async function laenderlisteErsteller (){
     }
    }
 
-
-
-
-if("laender" in localStorage) {}
-else{
-let laender =[];
-window.localStorage.setItem("laender",JSON.stringify(laender));}
-
-/**
- * Kartenobjekt
- */
 let mymap = L.map('map').setView([51.505, -0.09], 4);
 geoMap(mymap);
 
+/**
+ *befüllt map
+ * @param mymap
+ */
 function geoMap(mymap) {
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png	', {
