@@ -6,9 +6,7 @@ var addReise = function (name, ziel, start, ende) {
     if (startdatum.getTime() > enddatum.getTime()) {
         alert("Enddatum muss nach Startdatum liegen!");
     }
-
     else {
-
         document.getElementById("addReiseFeedback").innerHTML = "Neue Reise hinzugefügt!";
 
         var alleReisen = JSON.parse(localStorage.getItem('reisenArray')) || [];
