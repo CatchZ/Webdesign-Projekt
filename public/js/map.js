@@ -2,7 +2,7 @@
     const data = await fetch("https://datahub.io/core/country-list/r/0.html");
     return data.json()}
 
- */
+ /*
 const requestURL = "https://datahub.io/core/country-list/r/0.html";
 const request =new XMLHttpRequest();
 request.open('GET',requestURL);
@@ -11,23 +11,24 @@ request.send();
 request.onload=function (){
     const test =request.response;
     laenderlisteErsteller(test);
-
 }
 
-//test =  dataGEO();
-//displayDataiSO2();
-//localStorage.setItem("Test",JSON.stringify(laenderliste));
+ */
+
+const dataJ = fetch("./js/LaenderData.json").then(result => result.json());
+ //x = JSON.parse(LaenderDaten);
+laenderlisteErsteller(dataJ);
 function laenderlisteErsteller (x){
     let main = document.querySelector("#reiseziel");
     let o;
     let i;
     o =document.createElement('option');
     o.setAttribute('value',"test");
-    o.innerText=x[0]["Code"];
+    o.innerText=JSON.stringify(x[1]["Code"]);
     main.appendChild(o)
     for (i=0;i===160;i++){
         o =document.createElement('option');
-        //o.setAttribute('value',x.[i]["Code"]+);
+        o.setAttribute('value',x[i]["Code"]);
         o.innerText=x.name[i][["Code"]];
         main.appendChild(o)
 
