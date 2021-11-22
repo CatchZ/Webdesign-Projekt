@@ -29,8 +29,7 @@ function showReisen() {
 function reiseLoeschen(r) {
     //löscht von der Tabelle
     var x = r.parentNode.parentNode.rowIndex;
-   // landEntfernen(x);
-    //UpdateMap();
+
     document.getElementById("tabelleReiseuebersicht").deleteRow(x);
 
     //löscht aus dem localStorage
@@ -38,7 +37,7 @@ function reiseLoeschen(r) {
 
     x-=1;
     alert("Reise " + reisenAlt[x].reisename + " wurde gelöscht.");
-
+    landEntfernen(x);
     reisenAlt.splice(x,1);
 
     localStorage.setItem('reisenArray', JSON.stringify(reisenAlt));

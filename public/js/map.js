@@ -78,7 +78,7 @@ function updateStorage(key,data){
  */
 function landEntfernen(index){
     let temp =  JSON.parse(window.localStorage.getItem("laender"));
-    temp.splice(index,1);//korrektur für array beginnend null
+    temp.splice(index,1)//korrektur für array beginnend null
     updateStorage("laender",temp);
 
 }
