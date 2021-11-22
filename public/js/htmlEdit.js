@@ -1,5 +1,6 @@
 let hideReiseErsteller = document.querySelector('.reiseErsteller');
 //hideReiseErsteller.style.display='none';
-function reiseErstellerAnzeigen (){
+
+function reiseErstellerAnzeigen () {
     hideReiseErsteller.style.display='';
 }

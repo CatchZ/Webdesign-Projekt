@@ -2,7 +2,7 @@
     const data = await fetch("https://datahub.io/core/country-list/r/0.html");
     return data.json()}*/
 /**
-läd locales Jason
+ läd locales Jason
  */
 const loadLeander =async ()=>
 {
@@ -11,10 +11,9 @@ const loadLeander =async ()=>
     return dataJ.json();
 }
 
-
 laenderlisteErsteller();
 /**
-erstellt Länderliste für Selector im reisebuchenformuar
+ erstellt Länderliste für Selector im reisebuchenformuar
  */
 async function laenderlisteErsteller (){
 
@@ -29,7 +28,7 @@ async function laenderlisteErsteller (){
         p.innerText=dataJ2[i][["Name"]];
         main.appendChild(p);
     }
-   }
+}
 if("laender"in localStorage){}
 else{
     let leander=[];
@@ -48,27 +47,27 @@ geoMap(mymap);
 function geoMap(mymap) {
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png	', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     } ).addTo(mymap);
 
-let visitedCountries = JSON.parse(localStorage.getItem("laender"));
+    let visitedCountries = JSON.parse(localStorage.getItem("laender"));
 
-const loadData = async () => {
-    const data = await fetch('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson');
-    return data.json();
-}
+    const loadData = async () => {
+        const data = await fetch('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson');
+        return data.json();
+    }
 // dynamisch gemacht
-const displayData = async () => {
-    const geoJson = await loadData();
-    const filteredData = {
-        ...geoJson,
-        features: geoJson.features.filter(feature =>
-            !visitedCountries.includes(feature.properties.iso_a2))
-    };
-    L.geoJSON(filteredData).addTo(mymap);
-}
+    const displayData = async () => {
+        const geoJson = await loadData();
+        const filteredData = {
+            ...geoJson,
+            features: geoJson.features.filter(feature =>
+                !visitedCountries.includes(feature.properties.iso_a2))
+        };
+        L.geoJSON(filteredData).addTo(mymap);
+    }
 
-displayData();
+    displayData();
 
 }
 
@@ -77,11 +76,11 @@ displayData();
  * @constructor
  */
 function UpdateMap(){
-   landHinzufuegen(document.getElementById("reiseziel").value);
-  mymap.off();
-  mymap.remove();
-  mymap = L.map('map').setView([51.505, -0.09], 4);
-   geoMap(mymap);
+    landHinzufuegen(document.getElementById("reiseziel").value);
+    mymap.off();
+    mymap.remove();
+    mymap = L.map('map').setView([51.505, -0.09], 4);
+    geoMap(mymap);
 }
 
 /**
@@ -91,7 +90,7 @@ function UpdateMap(){
 function landHinzufuegen(land){
     let temp =  JSON.parse(window.localStorage.getItem("laender"));
     temp.push(land);
-   updateStorage("laender",temp);
+    updateStorage("laender",temp);
 }
 
 /**

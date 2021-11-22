@@ -1,5 +1,4 @@
 var getReise = JSON.parse(localStorage.getItem('reisenArray'));
-//var btnReiseLoeschen = document.createElement('button'); idk
 
 function showReisen() {
     var table = document.getElementById("tabelleReiseuebersicht");
@@ -13,13 +12,13 @@ function showReisen() {
         var cell5 = row.insertCell(4);
         var cell6 = row.insertCell(5);
 
-        cell1.innerHTML = getReise[i].reisename;
+        cell1.innerText = getReise[i].reisename;
         cell1.contentEditable = true;
-        cell2.innerHTML = getReise[i].reiseziel;
+        cell2.innerText = getReise[i].reiseziel;
         cell2.contentEditable = true;
-        cell3.innerHTML = getReise[i].reisestart;
+        cell3.innerText = getReise[i].reisestart;
         cell3.contentEditable = true;
-        cell4.innerHTML = getReise[i].reiseende;
+        cell4.innerText = getReise[i].reiseende;
         cell4.contentEditable = true;
         cell5.innerHTML = '<button type="button" onclick="reiseAktualisieren(this)">Aktualisieren</button>';
         cell6.innerHTML = '<button type="button" onclick="reiseLoeschen(this)">Löschen</button>';
@@ -35,7 +34,7 @@ function reiseLoeschen(r) {
     //löscht aus dem localStorage
     var reisenAlt = JSON.parse(localStorage.getItem('reisenArray')) || [];
 
-    x-=1;
+    x-=1; //lol sorry dafür
     alert("Reise " + reisenAlt[x].reisename + " wurde gelöscht.");
     landEntfernen(x);
     reisenAlt.splice(x,1);
@@ -50,7 +49,6 @@ function reiseAktualisieren(r){
     var x = r.parentNode.parentNode.rowIndex;
     var reisenAlt = JSON.parse(localStorage.getItem('reisenArray')) || [];
 
-
     var updatedReise = {
         'reisename': document.getElementById("tabelleReiseuebersicht").rows[x].cells[0].innerHTML,
         'reiseziel': document.getElementById("tabelleReiseuebersicht").rows[x].cells[1].innerHTML,
@@ -64,7 +62,6 @@ function reiseAktualisieren(r){
     localStorage.setItem('reisenArray', JSON.stringify(reisenAlt));
 
     alert("Reise " + reisenameAlt + " wurde aktualisiert.");
-
 }
 
 

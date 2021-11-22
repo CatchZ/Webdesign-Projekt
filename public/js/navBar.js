@@ -5,17 +5,19 @@ let p1 = document.createElement('p');
 let a = document.createElement('a');
 let b = document.createElement("button");
 
+appendChildren('Übersichtskarte', "mapUndFormular.html");
+appendChildren('Reiseverzeichnis', "tabelleReisen.html");
+appendChildren('Accountverwaltung', "");
+b.setAttribute("LogOutButton", "logout()")
+b.innerHTML = "Log out";
+b.id = 'logOutButton';
+b.onclick = function () {
+    logout();
+};
 
-appendChilds('Übersichtskarte',"mapUndFormular.html");
-appendChilds('Reiseverzeichnis',"tabelleReisen.html");
-appendChilds('Accountverwaltung',"");
-b.setAttribute("LogOutButton","logout()")
-b.innerHTML="Log out";
-b.id='logOutButton';
-b.onclick=function (){logout();};
 main.appendChild(li);
 li.appendChild(b);
-p1.id="loggedInUser";
+p1.id = "loggedInUser";
 main2.appendChild(p1);
 
 
@@ -27,15 +29,14 @@ main2.appendChild(p1);
  * @param text Stringtext
  * @param link href link
  */
-function appendChilds(text,link){
+function appendChildren(text, link) {
     let main = document.querySelector('#navliste');
     let li = document.createElement('li');
     let p = document.createElement('p');
     let a = document.createElement('a');
 
-
-    a.setAttribute('href',link);
-    a.innerHTML=text;
+    a.setAttribute('href', link);
+    a.innerHTML = text;
     main.appendChild(li);
     li.appendChild(p);
     p.appendChild(a);

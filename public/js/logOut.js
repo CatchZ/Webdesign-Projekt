@@ -2,8 +2,7 @@ function displayLogOut() {
     let usernameLoggedIn = localStorage.getItem("username");
     document.getElementById("loggedInUser").innerHTML = "Eingeloggt als " + usernameLoggedIn;
 }
-function logout(){
+function logout() {
     localStorage.clear();
-    window.location.replace("../index.html");
-
+    window.location.replace("../public/index.html");
 }
