@@ -30,7 +30,14 @@ async function laenderlisteErsteller (){
         main.appendChild(p);
     }
    }
-
+if("laender"in localStorage){}
+else{
+    let leander=[];
+    window.localStorage.setItem('laender',JSON.stringify(leander));
+}
+/**
+ * Kartenobjekt
+ */
 let mymap = L.map('map').setView([51.505, -0.09], 4);
 geoMap(mymap);
 
