@@ -46,31 +46,35 @@
 <!--Eingabemaske fürs Reise Buchen -->
 <div class="ausklappMenu">
     <div class="center">
-       <!-- <h2>Neue Reise</h2>-->
-    </div>
-    <div class="center">
         <div class="reiseErsteller" style="display: none">
             <form onsubmit="UpdateMap()
             addReise(document.getElementById('reisename').value, document.getElementById('reiseziel').value, document.getElementById('startdatum').value,document.getElementById('enddatum').value)
                  ">
-            <label for="reisename">Name der Reise: </label>
-            <input type="text" id="reisename" required/>
+                <label for="reisename">Name der Reise: </label>
+                <input type="text" id="reisename" required/>
+                <br><br>
 
-            <label for="reiseziel">Zielland</label>
-            <select name="Länder" id="reiseziel" >
-            </select>
+                <label for="reiseziel">Reiseziel: </label>
+                <select name="Länder" id="reiseziel">
+                </select>
+                <br><br>
 
-            <label for="startdatum">Startdatum: </label>
-            <input type="date" id="startdatum" required/>
+                <label for="startdatum">Startdatum: </label>
+                <input type="date" id="startdatum" required/>
+                <br><br>
 
-            <label for="enddatum">Enddatum: </label>
-            <input type="date" id="enddatum" required/>
+                <label for="enddatum">Enddatum: </label>
+                <input type="date" id="enddatum" required/>
+                <br><br>
 
-                <input type="submit" id="reiseformularsubmit" value="Bestätigen">
+                <div class="center">
+                    <input type="submit" id="reiseformularsubmit" value="Bestätigen">
+                </div>
             </form>
             <br>
         </div>
     </div>
+</div>
 <!--
     <div class="center">
         <button type="button" onclick=" UpdateMap(),
@@ -79,9 +83,8 @@
         </button>
         <br>
 </div>-->
-    <div class="center">
-        <p id="addReiseFeedback"></p>
-    </div>
+<div class="center">
+    <p id="addReiseFeedback"></p>
 </div>
 
 
