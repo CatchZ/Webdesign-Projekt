@@ -5,7 +5,8 @@ var addReise = function (name, ziel, start, ende) {
 
     if (startdatum.getTime() > enddatum.getTime()) {
         alert("Enddatum muss nach Startdatum liegen!");
-    } else {
+    }
+    else {
         document.getElementById("addReiseFeedback").innerHTML = "Neue Reise hinzugefügt!";
 
         var alleReisen = JSON.parse(localStorage.getItem('reisenArray')) || [];
@@ -27,7 +28,7 @@ var addReise = function (name, ziel, start, ende) {
 
 };
 
-function myFunction() {
+function myFunction(){
     var getReise = JSON.parse(localStorage.getItem('reisenArray'));
-    // document.getElementById("testForm").innerHTML = getReise[getReise.length-1].reisename;
+   // document.getElementById("testForm").innerHTML = getReise[getReise.length-1].reisename;
 }
