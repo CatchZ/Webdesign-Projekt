@@ -49,7 +49,10 @@
         <h2>Neue Reise</h2>
     </div>
     <div class="center">
-        <div class="reiseErsteller">
+        <div class="reiseErsteller" style="display: none">
+            <form onsubmit="UpdateMap()
+            addReise(document.getElementById('reisename').value, document.getElementById('reiseziel').value, document.getElementById('startdatum').value,document.getElementById('enddatum').value)
+                 ">
             <label for="reisename">Name der Reise: </label>
             <input type="text" id="reisename" required/>
 
@@ -61,17 +64,19 @@
 
             <label for="enddatum">Enddatum: </label>
             <input type="date" id="enddatum" required/>
-
+                <input type="submit" id="reiseformularsubmit" value="Bestätigen">
+            </form>
             <br>
         </div>
     </div>
+<!--
     <div class="center">
         <button type="button" onclick=" UpdateMap(),
             addReise(document.getElementById('reisename').value, document.getElementById('reiseziel').value, document.getElementById('startdatum').value,document.getElementById('enddatum').value)
                  ">Bestätigen
         </button>
         <br>
-    </div>
+</div>-->
     <div class="center">
         <p id="addReiseFeedback"></p>
     </div>

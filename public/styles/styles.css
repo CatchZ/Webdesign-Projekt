@@ -10,7 +10,7 @@ body {
     margin-top: 1em;
 }
 
-button {
+button,#reiseformularsubmit {
     display:flex;
     justify-content: center;
     background-color: rgba(103, 211, 103, 0.63);
