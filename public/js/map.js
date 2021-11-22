@@ -38,7 +38,6 @@ const displayData = async () => {
 
 displayData();
 
-
 }
 
 /**
@@ -47,7 +46,6 @@ displayData();
  */
 function UpdateMap(){
    landHinzufuegen(document.getElementById("reiseziel").value);
-   window.localStorage.setItem("TEST",document.getElementById("reiseziel").value);
   mymap.off();
   mymap.remove();
   mymap = L.map('map').setView([51.505, -0.09], 4);
@@ -80,7 +78,7 @@ function updateStorage(key,data){
  */
 function landEntfernen(index){
     let temp =  JSON.parse(window.localStorage.getItem("laender"));
-    temp.splice(index-1,1);//korrektur für array beginnend null
+    temp.splice(index,1);//korrektur für array beginnend null
     updateStorage("laender",temp);
 
 }
@@ -92,5 +90,5 @@ function landEntfernen(index){
  */
 function landAendern(index,land){
     let temp =  JSON.parse(window.localStorage.getItem("laender"));
-    temp[index-1]=land;
+    temp[index]=land;
 }
