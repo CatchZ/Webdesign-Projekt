@@ -1,7 +1,27 @@
-/**
- * Array mit ländern die nict auf der map dargestellt werden sollen
- * @type {string[]}
- */
+
+
+let laenderliste;
+//displayDataiSO2();
+//localStorage.setItem("Test",JSON.stringify(laenderliste));
+function laenderlisteErsteller (){
+    let main = document.querySelector("#reiseziel");
+    let o;
+    let i;
+    o =document.createElement('option');
+    o.setAttribute('value',"test");
+    o.innerText="test";
+    main.appendChild(o)
+    for (i=0;i===160;i++){
+        o =document.createElement('option');
+        o.setAttribute('value',laenderliste[i]);
+        o.innerText=laenderliste[i];
+        main.appendChild(o)
+
+    }
+
+}
+laenderlisteErsteller();
+
 if("laender" in localStorage) {}
 else{
 let laender =[];

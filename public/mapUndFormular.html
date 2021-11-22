@@ -46,7 +46,7 @@
 <!--Eingabemaske fürs Reise Buchen -->
 <div class="ausklappMenu">
     <div class="center">
-        <h2>Neue Reise</h2>
+       <!-- <h2>Neue Reise</h2>-->
     </div>
     <div class="center">
         <div class="reiseErsteller" style="display: none">
@@ -56,14 +56,23 @@
             <label for="reisename">Name der Reise: </label>
             <input type="text" id="reisename" required/>
 
+                <label for="reiseziel">Zielland</label>
+                <select name="Länder" id="reiseziel" >
+                    <option value="DE">DE</option>
+                    <option value="PL">PL</option>
+                    <option value="FR">FR</option>
+                    <option value="DK">DK</option>
+                </select>
+                <!--
             <label for="reiseziel">Reiseziel: </label>
             <input type="text" id="reiseziel" required/>
-
+-->
             <label for="startdatum">Startdatum: </label>
             <input type="date" id="startdatum" required/>
 
             <label for="enddatum">Enddatum: </label>
             <input type="date" id="enddatum" required/>
+
                 <input type="submit" id="reiseformularsubmit" value="Bestätigen">
             </form>
             <br>
