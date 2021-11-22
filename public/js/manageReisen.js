@@ -13,13 +13,13 @@ function showReisen() {
         var cell5 = row.insertCell(4);
         var cell6 = row.insertCell(5);
 
-        cell1.innerHTML = getReise[i].reisename;
+        cell1.innerText = getReise[i].reisename;
         cell1.contentEditable = true;
-        cell2.innerHTML = getReise[i].reiseziel;
+        cell2.innerText = getReise[i].reiseziel;
         cell2.contentEditable = true;
-        cell3.innerHTML = getReise[i].reisestart;
+        cell3.innerText = getReise[i].reisestart;
         cell3.contentEditable = true;
-        cell4.innerHTML = getReise[i].reiseende;
+        cell4.innerText = getReise[i].reiseende;
         cell4.contentEditable = true;
         cell5.innerHTML = '<button type="button" onclick="reiseAktualisieren(this)">Aktualisieren</button>';
         cell6.innerHTML = '<button type="button" onclick="reiseLoeschen(this)">Löschen</button>';
