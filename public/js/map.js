@@ -11,7 +11,6 @@ const loadLeander =async ()=>
     return dataJ.json();
 }
 
-
 laenderlisteErsteller();
 /**
  erstellt Länderliste für Selector im reisebuchenformuar
