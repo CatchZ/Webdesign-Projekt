@@ -4,7 +4,6 @@ const app = express();
 const redisPort = 6379;
 const cookieParser = require('cookie-parser');
 
-
 const redis = require('redis');
 const client = redis.createClient(redisPort);
 
