@@ -1,0 +1,23 @@
+{
+  "name": "webdesign-projekt",
+  "version": "1.0.0",
+  "description": "WAD Wintersemester 2021/2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CatchZ/Webdesign-Projekt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CatchZ/Webdesign-Projekt/issues"
+  },
+  "homepage": "https://github.com/CatchZ/Webdesign-Projekt#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
