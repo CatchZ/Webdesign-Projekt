@@ -19,6 +19,11 @@
   },
   "homepage": "https://github.com/CatchZ/Webdesign-Projekt#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "redis": "^4.0.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.2"
   }
 }
