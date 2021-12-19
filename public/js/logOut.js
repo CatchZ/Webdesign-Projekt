@@ -1,17 +1,23 @@
 const BASE_URL = "https://reisen-reisen.herokuapp.com";
 
-async function displayLogOut() {
-    // let usernameLoggedIn = localStorage.getItem("username");
+const getUser = async () => {
     const loginUrl = `${BASE_URL}/loggedInUser`;
-
-    const response = await fetch(loginUrl, {
+    const res = await fetch(loginUrl, {
         method: 'GET',
+        mode: 'cors',
         credentials: 'include',
-        body: JSON.stringify({username})
+        headers: {
+            'Content-Type': 'application/json'
+        },
     });
-    document.getElementById("loggedInUser").innerHTML = "Eingeloggt als " + username;
-    return response.status === 200;
-}
+    await res.json();
+    return res.json();
+};
+
+getUser().then(res => {
+    let loggedInUser = res;
+    document.getElementById("loggedInUser").innerHTML = "Eingeloggt als " + loggedInUser;
+})
 
 function logout() {
     localStorage.clear();
