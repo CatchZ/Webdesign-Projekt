@@ -14,7 +14,7 @@ const getUser = async () => {
 };
 
 getUser().then(res => {
-    let loggedInUser = res;
+    let loggedInUser = res.email;
     document.getElementById("loggedInUser").innerHTML = "Eingeloggt als " + loggedInUser;
 })
 
