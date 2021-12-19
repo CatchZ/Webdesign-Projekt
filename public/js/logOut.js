@@ -10,7 +10,6 @@ const getUser = async () => {
             'Content-Type': 'application/json'
         },
     });
-    await res.json();
     return res.json();
 };
 
