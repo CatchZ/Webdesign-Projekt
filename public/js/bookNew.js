@@ -8,6 +8,7 @@ var addReise = function (name, ziel, start, ende) {
     else {
         document.getElementById("addReiseFeedback").innerHTML = "Neue Reise hinzugefügt!";
 
+        //todo
         var alleReisen = JSON.parse(localStorage.getItem('reisenArray')) || [];
 
         var neueReise = {
@@ -19,9 +20,9 @@ var addReise = function (name, ziel, start, ende) {
 
         alleReisen.push(neueReise);
 
+        //todo
         localStorage.setItem('reisenArray', JSON.stringify(alleReisen));
 
-        //document.getElementById("testForm").innerHTML = localStorage.getItem('reisenArray');
         myFunction();
     }
 };

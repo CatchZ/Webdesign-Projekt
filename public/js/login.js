@@ -32,6 +32,25 @@ form.addEventListener('submit', (event) => {
         })
 });
 
+const getUser = async () => {
+    const loginUrl = `${BASE_URL}/loggedInUser`;
+    const res = await fetch(loginUrl, {
+        method: 'GET',
+        mode: 'cors',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    });
+    return res.json();
+};
+
+getUser().then(res => {
+    let loggedInUser = res.email;
+    document.getElementById("loggedInUser").innerHTML = "Eingeloggt als " + loggedInUser; //wird ueberhaupt nicht aufgerufen...
+})
+
+
 /*Alt mit localstorage*/
 /*
 const user =

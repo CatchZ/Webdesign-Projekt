@@ -29,7 +29,7 @@ async function laenderlisteErsteller (){
         main.appendChild(p);
     }
 }
-if("laender"in localStorage){}
+if("laender"in localStorage){} //todo
 else{
     let leander=[];
     window.localStorage.setItem('laender',JSON.stringify(leander));
@@ -51,6 +51,7 @@ function geoMap(mymap) {
     } ).addTo(mymap);
 
     let visitedCountries = JSON.parse(localStorage.getItem("laender"));
+    //todo
 
     const loadData = async () => {
         const data = await fetch('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson');
@@ -87,7 +88,7 @@ function UpdateMap(){
  * updatet laender Array aus localstorage um gewünschtes Land
  * @param land
  */
-function landHinzufuegen(land){
+function landHinzufuegen(land){ //todo
     let temp =  JSON.parse(window.localStorage.getItem("laender"));
     temp.push(land);
     updateStorage("laender",temp);
@@ -98,7 +99,7 @@ function landHinzufuegen(land){
  * @param key variable die geupdatet werden soll
  * @param data
  */
-function updateStorage(key,data){
+function updateStorage(key,data){ //todo
     window.localStorage.removeItem(key);
     window.localStorage.setItem(key,JSON.stringify(data));
 }
@@ -107,7 +108,7 @@ function updateStorage(key,data){
  * entfernt land anstelle x beginnend ab 1
  * @param index
  */
-function landEntfernen(index){
+function landEntfernen(index){ //todo
     let temp =  JSON.parse(window.localStorage.getItem("laender"));
     temp.splice(index,1)//korrektur für array beginnend null
     updateStorage("laender",temp);

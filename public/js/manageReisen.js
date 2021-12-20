@@ -1,4 +1,4 @@
-var getReise = JSON.parse(localStorage.getItem('reisenArray'));
+var getReise = JSON.parse(localStorage.getItem('reisenArray')); //todo
 
 function showReisen() {
     var table = document.getElementById("tabelleReiseuebersicht");
@@ -32,18 +32,19 @@ function reiseLoeschen(r) {
     document.getElementById("tabelleReiseuebersicht").deleteRow(x);
 
     //löscht aus dem localStorage
+    //todo
     var reisenAlt = JSON.parse(localStorage.getItem('reisenArray')) || [];
 
     x-=1; //lol sorry dafür
     alert("Reise " + reisenAlt[x].reisename + " wurde gelöscht.");
     landEntfernen(x);
     reisenAlt.splice(x,1);
-
+    //todo
     localStorage.setItem('reisenArray', JSON.stringify(reisenAlt));
 
     //var reisenArray = JSON.stringify(localStorage.getItem('reisenArray'));
 }
-
+//todo
 function reiseAktualisieren(r){
     //soll neue Daten aufnehmen und speichern
     var x = r.parentNode.parentNode.rowIndex;
