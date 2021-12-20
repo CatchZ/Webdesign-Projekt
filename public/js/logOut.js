@@ -16,11 +16,18 @@ const logOut = async () => {
 
 }
 
-logOut().then(loggingOut => {
-    if (loggingOut) {
-        window.location.replace("../index.html");
-    }
-})
+//todo geht halt nicht
+let logOutButton = document.getElementById('logOutButton');
+logOutButton.addEventListener('button', (event) => {
+    event.preventDefault();
+
+    logOut().then(loggingOut => {
+        if (loggingOut) {
+            window.location.replace("../index.html");
+        }
+    })
+});
+
 
 
 /*
