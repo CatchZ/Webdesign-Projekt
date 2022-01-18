@@ -23,7 +23,7 @@ logOutButton.addEventListener('button', (event) => {
 
     logOut().then(loggingOut => {
         if (loggingOut) {
-            window.location.replace("../index.html");
+            window.location.replace("../index.html"); //warum wird die weiterleitung nicht gemacht :-/
         }
     })
 });
