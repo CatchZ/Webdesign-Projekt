@@ -3,6 +3,9 @@ body {
     margin-bottom: 5em;
 }
 
+h1 {
+    font-style: italic;
+}
 .center {
     display: flex;
     justify-content: center;
@@ -30,7 +33,7 @@ button, #reiseformularsubmit {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: darkcyan;
+    background-color: rgba(108, 166, 108, 0.63);
 }
 
 .navbar li {
@@ -71,7 +74,6 @@ button, #reiseformularsubmit {
     background-color: rgba(86, 210, 86, 0.63);
 }
 
-
 #logOutButton {
     text-decoration: none;
     display: inherit;
@@ -84,6 +86,7 @@ button, #reiseformularsubmit {
 }
 
 #map {
+    padding-top: 200px;
     width: 600px;
     height: 400px;
 }
