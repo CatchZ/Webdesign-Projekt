@@ -9,8 +9,6 @@ h1 {
 .center {
     display: flex;
     justify-content: center;
-    margin-bottom: 1em;
-    margin-top: 1em;
 }
 
 button, #reiseformularsubmit {
@@ -72,6 +70,11 @@ button, #reiseformularsubmit {
 
 .reiseTabelle tr:hover {
     background-color: rgba(86, 210, 86, 0.63);
+}
+
+.loginTitle {
+    font-size: 25px;
+    font-weight: bold;
 }
 
 #logOutButton {
