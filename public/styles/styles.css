@@ -11,6 +11,9 @@ h1 {
     justify-content: center;
 }
 
+.header {
+    padding-bottom: 2em;
+}
 button, #reiseformularsubmit {
     display: flex;
     justify-content: center;

@@ -7,7 +7,6 @@ let b = document.createElement("button");
 
 appendChildren('Übersichtskarte', "mapUndFormular.html");
 appendChildren('Reiseverzeichnis', "tabelleReisen.html");
-appendChildren('Accountverwaltung', "");
 b.setAttribute("LogOutButton", "logout()")
 b.innerHTML = "Log out";
 b.id = 'logOutButton';
