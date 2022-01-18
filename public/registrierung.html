@@ -2,18 +2,11 @@
 <html lang="en">
 <head>
     <head>
-        <script type="text/javascript" src="js/isAuthorized.js">authorized()</script>
         <meta charset="UTF-8">
         <title>Reisen Reisen</title>
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="shortcut icon" type="image/x-icon" href="images/rakete.svg">
 
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-              integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-              crossorigin=""/>
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-                integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-                crossorigin=""></script>
 
     </head>
 </head>
@@ -31,7 +24,7 @@
 <!-- Registrierung-->
 <div>
     <div class="center">
-        <form action="#">
+        <form action="#" onsubmit="neuenUserRegistrieren()">
             <div class="center">
                 <p class="loginTitle">Neues Konto</p>
             </div>
@@ -41,18 +34,23 @@
             <label for="passwort"></label><input type="password" id="passwort" placeholder="Passwort" required/>
             <br><br>
             <div class="center">
-                <input type="submit" value="Registrieren">
+                <input type="submit" value="Jetzt registrieren">
             </div>
+            <div class="center">
+                <p id="registrationSubmitted"></p>
+            </div>
+
+
         </form>
     </div>
-    
+
 </div>
 <!---->
 
 
 
+<script src="js/registrieren.js"></script>
 
-<script src="js/navBar.js"></script>
 
 </body>
 </html>
