@@ -5,8 +5,12 @@ const form = document.querySelector('form');
 var username = document.getElementById('email');
 var password = document.getElementById('passwort');
 */
+
+document.getElementById("registrationForm").addEventListener("submit", neuenUserRegistrieren)
+
 function neuenUserRegistrieren() {
-    document.getElementById("registrationSubmitted").innerHTML = "Bestätigungsmail versendet";
+    document.getElementById("registrationSubmitted").innerHTML = "Bestätigungsmail versendet. <br>" +
+        "Bitte besuche dein Mailfach und bestätige deine Anmeldung innerhalb von zwei Tagen, um deine Registrierung abzuschließen." ;
 }
 
 
