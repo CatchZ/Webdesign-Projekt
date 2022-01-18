@@ -9,8 +9,10 @@ var password = document.getElementById('passwort');
 document.getElementById("registrationForm").addEventListener("submit", neuenUserRegistrieren)
 
 function neuenUserRegistrieren() {
-    document.getElementById("registrationSubmitted").innerHTML = "Bestätigungsmail versendet. <br>" +
-        "Bitte besuche dein Mailfach und bestätige deine Anmeldung innerhalb von zwei Tagen, um deine Registrierung abzuschließen." ;
+    alert("Bestätigungsmail versendet. Bitte besuche dein Mailfach und bestätige deine Anmeldung innerhalb von zwei Tagen, um deine Registrierung abzuschließen.");
+    window.location.replace("../index.html");
+    //document.getElementById("registrationSubmitted").innerHTML = "Bestätigungsmail versendet. <br>" +
+      //  "Bitte besuche dein Mailfach und bestätige deine Anmeldung innerhalb von zwei Tagen, um deine Registrierung abzuschließen." ;
 }
 
 
