@@ -1,4 +1,3 @@
-
 const BASE_URL = "https://reisen-reisen.herokuapp.com";
 
 const form = document.querySelector('form');
@@ -30,7 +29,7 @@ form.addEventListener('submit', (event) => {
         .then(wasSuccessful => {
             if (wasSuccessful) {
                 alert("Email gesendet");
-                window.location.replace("../map.html");
+               // window.location.replace("../map.html");
             } else {
                alert("Etwas hat nicht geklappt");
             }
