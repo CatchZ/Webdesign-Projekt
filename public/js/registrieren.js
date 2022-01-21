@@ -5,7 +5,7 @@ var username = document.getElementById('emailReg');
 var password = document.getElementById('passwortReg');
 
 
-document.getElementById("registrationForm").addEventListener("submit", neuenUserRegistrieren);
+//document.getElementById("registrationForm").addEventListener("submit", neuenUserRegistrieren);
 
 const register = async (username, password) => {
     const regUrl = `${BASE_URL}/sendRegistrationMail`;
@@ -39,7 +39,7 @@ form.addEventListener('submit', (event) => {
 
 function neuenUserRegistrieren() {
     alert("Bestätigungsmail versendet. Bitte besuche dein Mailfach und bestätige deine Anmeldung innerhalb von zwei Tagen, um deine Registrierung abzuschließen.");
-    window.location.replace("../index.html");
+    //window.location.replace("../index.html");
     //document.getElementById("registrationSubmitted").innerHTML = "Bestätigungsmail versendet. <br>" +
       //  "Bitte besuche dein Mailfach und bestätige deine Anmeldung innerhalb von zwei Tagen, um deine Registrierung abzuschließen." ;
 }
