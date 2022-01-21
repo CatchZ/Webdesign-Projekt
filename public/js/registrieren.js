@@ -32,6 +32,7 @@ form.addEventListener('submit', (event) => {
                 //window.location.replace("../index.html");
             } else {
                alert("Etwas hat nicht geklappt");
+               console.log("fehler");
             }
         })
 });
