@@ -29,8 +29,8 @@ form.addEventListener('submit', (event) => {
     register(username.value, password.value)
         .then(wasSuccessful => {
             if (wasSuccessful) {
-                alert("Email gesendet");
-               // window.location.replace("../map.html");
+                //alert("Email gesendet");
+                window.location.replace("../index.html");
             } else {
                alert("Etwas hat nicht geklappt");
             }
