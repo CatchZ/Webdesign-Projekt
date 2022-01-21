@@ -33,6 +33,7 @@ form.addEventListener('submit', (event) => {
                 window.location.replace("../map.html");
             } else {
                alert("Etwas hat nicht geklappt");
+               console.log("Fehler");
             }
         })
 });
