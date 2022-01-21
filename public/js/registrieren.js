@@ -9,6 +9,7 @@ var password = document.getElementById('passwortReg');
 
 const register = async (username, password) => {
     const regUrl = `${BASE_URL}/sendRegistrationMail`;
+    console.log(regUrl);
 
     const response = await fetch(regUrl, {
         method: 'POST',
