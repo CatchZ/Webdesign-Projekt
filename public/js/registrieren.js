@@ -12,7 +12,7 @@ const register = async (username, password) => {
 
     const response = await fetch(regUrl, {
         method: 'POST',
-        mode: 'no-cors',
+        mode: 'cors',
         credentials: 'include',
         headers: {
             'Content-Type': 'application/json'
@@ -22,14 +22,13 @@ const register = async (username, password) => {
     return response.status === 200;
 }
 
-
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     register(username.value, password.value)
         .then(wasSuccessful => {
             if (wasSuccessful) {
-                //alert("Email gesendet");
+                console.log("Email sent");
                 //window.location.replace("../index.html");
             } else {
                alert("Etwas hat nicht geklappt");
