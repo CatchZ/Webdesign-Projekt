@@ -30,7 +30,7 @@ form.addEventListener('submit', (event) => {
         .then(wasSuccessful => {
             if (wasSuccessful) {
                 //alert("Email gesendet");
-                window.location.replace("../index.html");
+                //window.location.replace("../index.html");
             } else {
                alert("Etwas hat nicht geklappt");
             }
