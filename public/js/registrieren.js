@@ -13,7 +13,7 @@ const register = async (username, password) => {
 
     const response = await fetch(regUrl, {
         method: 'POST',
-        mode: 'cors',
+        mode: 'no-cors',
         credentials: 'include',
         headers: {
             'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ form.addEventListener('submit', (event) => {
                 //window.location.replace("../index.html");
             } else {
                alert("Etwas hat nicht geklappt");
-               console.log("fehler");
+               console.log("fehlerr");
             }
         })
 });
