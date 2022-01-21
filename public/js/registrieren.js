@@ -5,7 +5,7 @@ var username = document.getElementById('emailReg');
 var password = document.getElementById('passwortReg');
 
 
-//document.getElementById("registrationForm").addEventListener("submit", neuenUserRegistrieren);
+document.getElementById("registrationForm").addEventListener("submit", neuenUserRegistrieren);
 
 const register = async (username, password) => {
     const regUrl = `${BASE_URL}/sendRegistrationMail`;
@@ -21,6 +21,7 @@ const register = async (username, password) => {
     });
     return response.status === 200;
 }
+
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
