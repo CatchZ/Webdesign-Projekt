@@ -9,7 +9,7 @@ var password = document.getElementById('passwortReg');
 //document.getElementById("registrationForm").addEventListener("submit", neuenUserRegistrieren);
 
 const register = async (username, password) => {
-    const regUrl = `${BASE_URL}/registrationRequest`;
+    const regUrl = `${BASE_URL}/sendRegistrationMail`;
 
     const response = await fetch(regUrl, {
         method: 'POST',
@@ -29,11 +29,10 @@ form.addEventListener('submit', (event) => {
     register(username.value, password.value)
         .then(wasSuccessful => {
             if (wasSuccessful) {
-                alert("Klappt");
+                alert("Email gesendet");
                 window.location.replace("../map.html");
             } else {
                alert("Etwas hat nicht geklappt");
-               console.log("Fehler");
             }
         })
 });
