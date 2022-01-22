@@ -10,7 +10,7 @@
 <body>
 
 <div class = "localisationOptions">
-    <select name ="language" onChange="{onChange}">
+    <select data-i18n-switcher class="locale-switcher">
         <option value="de">Deutsch</option>
         <option value="en">English</option>
     </select>
@@ -37,7 +37,8 @@
                 <h1 data-i18n-key="login_msg"></h1>
             </div>
 
-            <label for="email"></label><input type="email" id="email" placeholder="E-Mail" required/>
+            <label for="email"></label>
+            <input type="email" id="email" placeholder="E-Mail" required/>
             <br><br>
             <label for="passwort"></label><input type="password" id="passwort" placeholder="Passwort" required/>
             <br><br>

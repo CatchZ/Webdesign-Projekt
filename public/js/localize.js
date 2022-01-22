@@ -1,4 +1,4 @@
-const locale = "de";
+const locale = "en";
 
 const translations = {
     "de": {
@@ -28,3 +28,32 @@ function translateElement(element) {
     const translation = translations[locale][key];
     element.innerText = translation;
 }
+/*
+* const defaultLocale = "de";
+let locale;
+
+// ...
+
+// When the page content is ready...
+document.addEventListener("DOMContentLoaded", () => {
+  setLocale(defaultLocale);
+
+  bindLocaleSwitcher(defaultLocale);
+});
+
+// ...
+
+// Whenever the user selects a new locale, we
+// load the locale's translations and update
+// the page
+function bindLocaleSwitcher(initialValue) {
+  const switcher =
+    document.querySelector("[data-i18n-switcher]");
+
+  switcher.value = initialValue;
+
+  switcher.onchange = (e) => {
+    // Set the locale to the selected option[value]
+    setLocale(e.target.value);
+  };
+}*/
