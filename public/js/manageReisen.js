@@ -20,8 +20,8 @@ function showReisen() {
         cell3.contentEditable = true;
         cell4.innerText = getReise[i].reiseende;
         cell4.contentEditable = true;
-        cell5.innerHTML = '<button type="button" onclick="reiseAktualisieren(this)">Aktualisieren</button>';
-        cell6.innerHTML = '<button type="button" onclick="reiseLoeschen(this)">Löschen</button>';
+        cell5.innerHTML = '<button type="button" data-i18n-key="update" onclick="reiseAktualisieren(this)"></button>';
+        cell6.innerHTML = '<button type="button" data-i18n-key="delete" onclick="reiseLoeschen(this)"></button>';
     }
 }
 
