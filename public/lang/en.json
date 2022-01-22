@@ -4,5 +4,6 @@
   "registrieren": "Sign up",
   "email": "Email",
   "pass": "Password",
-  "register_title": "Sign up"
+  "register_title": "Sign up",
+  "loginFailed": "Wrong username or password"
 }

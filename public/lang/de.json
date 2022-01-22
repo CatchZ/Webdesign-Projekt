@@ -4,6 +4,7 @@
   "registrieren": "Registrieren",
   "email": "E-Mail",
   "pass": "Passwort",
-  "register_title": "Neues Konto"
+  "register_title": "Neues Konto",
+  "loginFailed": "Falscher Username oder Passwort"
 
 }
