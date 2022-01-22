@@ -18,5 +18,6 @@
   "uebersicht": "All trips",
   "update": "Update",
   "delete": "Delete",
-  "dateError": "End date has to be after start date!"
+  "dateError": "End date has to be after start date!",
+  "reiseAdded": "Trip added!"
 }

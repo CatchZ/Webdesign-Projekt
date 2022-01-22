@@ -18,5 +18,6 @@
   "uebersicht": "Alle Reisen",
   "update": "Aktualisieren",
   "delete": "Löschen",
-  "dateError": "Enddatum muss nach Startdatum liegen!"
+  "dateError": "Enddatum muss nach Startdatum liegen!",
+  "reiseAdded":"Reise hinzugefügt!"
 }

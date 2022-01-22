@@ -7,7 +7,7 @@ var addReise = function (name, ziel, start, ende) {
         document.getElementById("dateError").style.display = "block";
     }
     else {
-        document.getElementById("addReiseFeedback").innerHTML = "Neue Reise hinzugefügt!";
+        document.getElementById("addReiseFeedback").style.display = "block";
 
         //todo
         var alleReisen = JSON.parse(localStorage.getItem('reisenArray')) || [];
