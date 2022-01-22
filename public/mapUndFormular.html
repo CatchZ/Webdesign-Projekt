@@ -60,25 +60,25 @@
             <form onsubmit=" onclick=UpdateMap()
             addReise(document.getElementById('reisename').value, document.getElementById('reiseziel').value, document.getElementById('startdatum').value,document.getElementById('enddatum').value)
                  ">
-                <label for="reisename">Name der Reise: </label>
+                <label for="reisename" data-i18n-key="reiseName">Name der Reise: </label>
                 <input type="text" id="reisename" required/>
                 <br><br>
 
-                <label for="reiseziel">Reiseziel: </label>
+                <label for="reiseziel" data-i18n-key="reiseZiel">Reiseziel: </label>
                 <select name="Länder" id="reiseziel">
                 </select>
                 <br><br>
 
-                <label for="startdatum">Startdatum: </label>
+                <label for="startdatum" data-i18n-key="startDatum">Startdatum: </label>
                 <input type="date" id="startdatum" required/>
                 <br><br>
 
-                <label for="enddatum">Enddatum: </label>
+                <label for="enddatum"data-i18n-key="endDatum">Enddatum: </label>
                 <input type="date" id="enddatum" required/>
                 <br><br>
 
                 <div class="center">
-                    <input type="submit" id="reiseformularsubmit" value="Bestätigen">
+                    <button type="submit" id="reiseformularsubmit" data-i18n-key="submit"></button>
                 </div>
             </form>
             <br>
@@ -97,7 +97,7 @@
     <p id="addReiseFeedback"></p>
 </div>
 
-
+<script src="js/localize.js"></script>
 <script src="js/logOut.js"></script>
 <script src="js/map.js"></script>
 <script src="js/htmlEdit.js"></script>
