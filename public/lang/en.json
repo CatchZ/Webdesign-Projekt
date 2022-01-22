@@ -5,5 +5,17 @@
   "email": "Email",
   "pass": "Password",
   "register_title": "Sign up",
-  "loginFailed": "Wrong username or password"
+  "loginFailed": "Wrong username or password",
+  "karte": "Map",
+  "reiseverzeichnis": "My trips",
+  "logout": "Log out",
+  "neueReiseBuchen_btn": "Book new trip",
+  "reiseName": "Name of trip",
+  "reiseZiel": "Destination",
+  "startDatum": "Start date",
+  "endDatum": "End Date",
+  "submit": "Submit",
+  "uebersicht": "All trips",
+  "update": "Update",
+  "delete": "Delete"
 }

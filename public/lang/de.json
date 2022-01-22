@@ -5,6 +5,17 @@
   "email": "E-Mail",
   "pass": "Passwort",
   "register_title": "Neues Konto",
-  "loginFailed": "Falscher Username oder Passwort"
-
+  "loginFailed": "Falscher Username oder Passwort",
+  "karte": "Karte",
+  "reiseverzeichnis": "Meine Reisen",
+  "logout": "Abmelden",
+  "neueReiseBuchen_btn": "Neue Reise buchen",
+  "reiseName": "Reisename",
+  "reiseZiel": "Reiseziel",
+  "startDatum": "Startdatum",
+  "endDatum": "Enddatum",
+  "submit": "Bestätigen",
+  "uebersicht": "Alle Reisen",
+  "update": "Aktualisieren",
+  "delete": "Löschen"
 }
