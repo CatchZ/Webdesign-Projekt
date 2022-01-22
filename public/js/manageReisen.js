@@ -36,6 +36,8 @@ function reiseLoeschen(r) {
     var reisenAlt = JSON.parse(localStorage.getItem('reisenArray')) || [];
 
     x-=1; //lol sorry dafür
+
+    //todo
     alert("Reise " + reisenAlt[x].reisename + " wurde gelöscht.");
     landEntfernen(x);
     reisenAlt.splice(x,1);
@@ -62,5 +64,6 @@ function reiseAktualisieren(r){
     reisenAlt[x-1] = updatedReise;
     localStorage.setItem('reisenArray', JSON.stringify(reisenAlt));
 
+    //todo
     alert("Reise " + reisenameAlt + " wurde aktualisiert.");
 }
