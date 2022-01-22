@@ -1,8 +1,8 @@
 const locale = "de";
 
 const translations = {
-    "de": {
-        "login_msg": "MEld dich an"
+    "en": {
+        "login_msg": "Méld dich an"
     },
     "en": {
         "login_msg": "log the f in"
