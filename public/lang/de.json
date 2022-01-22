@@ -1,5 +1,7 @@
 {
   "login_msg": "Einloggen",
   "anmelden_btn": "Anmelden",
-  "registrieren": "Registrieren"
+  "registrieren": "Registrieren",
+  "email": "E-Mail",
+  "pass": "Passwort"
 }
