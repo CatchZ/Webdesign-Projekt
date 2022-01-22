@@ -4,7 +4,6 @@ const form = document.querySelector('form');
 var username = document.getElementById('emailReg');
 var password = document.getElementById('passwortReg');
 
-
 //document.getElementById("registrationForm").addEventListener("submit", neuenUserRegistrieren);
 
 const register = async (username, password) => {
