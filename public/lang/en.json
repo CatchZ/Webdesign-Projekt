@@ -17,5 +17,6 @@
   "submit": "Submit",
   "uebersicht": "All trips",
   "update": "Update",
-  "delete": "Delete"
+  "delete": "Delete",
+  "dateError": "End date has to be after start date!"
 }

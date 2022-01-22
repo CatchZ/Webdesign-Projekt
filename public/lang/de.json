@@ -17,5 +17,6 @@
   "submit": "Bestätigen",
   "uebersicht": "Alle Reisen",
   "update": "Aktualisieren",
-  "delete": "Löschen"
+  "delete": "Löschen",
+  "dateError": "Enddatum muss nach Startdatum liegen!"
 }

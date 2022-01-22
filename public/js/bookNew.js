@@ -3,7 +3,8 @@ var addReise = function (name, ziel, start, ende) {
     var enddatum = new Date(ende);
 
     if (startdatum.getTime() > enddatum.getTime()) {
-        alert("Enddatum muss nach Startdatum liegen!");
+        //alert("Enddatum muss nach Startdatum liegen!");
+        document.getElementById("dateError").style.display = "block";
     }
     else {
         document.getElementById("addReiseFeedback").innerHTML = "Neue Reise hinzugefügt!";
