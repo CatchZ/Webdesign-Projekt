@@ -1,59 +1,54 @@
-const locale = "en";
+// deutsch als default
+const defaultLocale = "de";
 
-const translations = {
-    "de": {
-        "login_msg": "Einloggen",
-        "anmelden_btn": "Anmelden",
-        "registrieren": "Registrieren"
-    },
-    "en": {
-        "login_msg": "Log in",
-        "anmelden_btn": "Anmelden",
-        "registrieren": "Sign up"
-    },
-};
+let locale;
+let translations = {};
 
-// When the page content is ready...
 document.addEventListener("DOMContentLoaded", () => {
+    setLocale(defaultLocale);
+    bindLocaleSwitcher(defaultLocale);
+});
+
+
+async function setLocale(newLocale) {
+    if (newLocale === locale) return;
+
+    const newTranslations =
+        await fetchTranslationsFor(newLocale);
+
+    locale = newLocale;
+    translations = newTranslations;
+
+    translatePage();
+}
+
+// Retrieve translations JSON object for the given
+// locale over the network
+async function fetchTranslationsFor(newLocale) {
+    const response = await fetch(`/lang/${newLocale}.json`);
+    return await response.json();
+}
+
+// alles was den data-i18n-key hat soll uebersetzt werden
+function translatePage() {
     document
-        // Find all elements that have the key attribute
         .querySelectorAll("[data-i18n-key]")
         .forEach(translateElement);
-});
-// Replace the inner text of the given HTML element
-// with the translation in the active locale,
-// corresponding to the element's data-i18n-key
+}
+
 function translateElement(element) {
     const key = element.getAttribute("data-i18n-key");
-    const translation = translations[locale][key];
+    const translation = translations[key];
     element.innerText = translation;
 }
-/*
-* const defaultLocale = "de";
-let locale;
-
-// ...
-
-// When the page content is ready...
-document.addEventListener("DOMContentLoaded", () => {
-  setLocale(defaultLocale);
-
-  bindLocaleSwitcher(defaultLocale);
-});
-
-// ...
-
-// Whenever the user selects a new locale, we
-// load the locale's translations and update
-// the page
 function bindLocaleSwitcher(initialValue) {
-  const switcher =
-    document.querySelector("[data-i18n-switcher]");
+    const switcher =
+        document.querySelector("[data-i18n-switcher]");
 
-  switcher.value = initialValue;
+    switcher.value = initialValue;
 
-  switcher.onchange = (e) => {
-    // Set the locale to the selected option[value]
-    setLocale(e.target.value);
-  };
-}*/
+    switcher.onchange = (e) => {
+        // Set the locale to the selected option[value]
+        setLocale(e.target.value);
+    };
+}
