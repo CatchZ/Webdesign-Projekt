@@ -5,7 +5,7 @@ let p1 = document.createElement('p');
 let a = document.createElement('a');
 let b = document.createElement("button");
 
-appendChildren('Übersichtskarte', "mapUndFormular.html", 'data-i18n-key="update"');
+appendChildren('Übersichtskarte', "mapUndFormular.html");
 appendChildren('Reiseverzeichnis', "tabelleReisen.html");
 b.setAttribute("LogOutButton", "logout()")
 b.innerHTML = "Log out";
@@ -28,11 +28,11 @@ main2.appendChild(p1);
  * @param text Stringtext
  * @param link href link
  */
-function appendChildren(text, link, l18nTag) {
+function appendChildren(text, link) {
     let main = document.querySelector('#navliste');
     let li = document.createElement('li');
     let p = document.createElement('p');
-    let a = document.createElement('a ' + l18nTag);
+    let a = document.createElement('a');
 
     a.setAttribute('href', link);
     a.innerHTML = text;
