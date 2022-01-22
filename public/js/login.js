@@ -27,7 +27,8 @@ form.addEventListener('submit', (event) => {
             if (wasSuccessfulLogin) {
                 window.location.replace("../map.html");
             } else {
-                document.getElementById("loginFailed").innerHTML = "Username oder Passwort falsch";
+                document.getElementById("loginFailed").style.visibility = "visible";
+                //document.getElementById("loginFailed").innerHTML = "Username oder Passwort falsch";
             }
         })
 });
