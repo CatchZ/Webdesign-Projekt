@@ -6,6 +6,11 @@ body {
 h1 {
     font-style: italic;
 }
+
+.localisationOptions {
+    text-align: right;
+}
+
 .center {
     display: flex;
     justify-content: center;
@@ -14,6 +19,7 @@ h1 {
 .header {
     padding-bottom: 2em;
 }
+
 button, #reiseformularsubmit {
     display: flex;
     justify-content: center;
