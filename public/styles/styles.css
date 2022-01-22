@@ -102,6 +102,6 @@ button, #reiseformularsubmit {
     width: 600px;
     height: 400px;
 }
-.hiddenP {
+p.hiddenP {
     visibility: hidden;
 }
