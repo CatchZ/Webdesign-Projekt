@@ -13,7 +13,7 @@
 
 <div class = "localisationOptions">
     <label>
-        <select name ="language" onChange="{onChange}">
+        <select data-i18n-switcher class="locale-switcher">
             <option value="de">Deutsch</option>
             <option value="en">English</option>
         </select>
@@ -43,7 +43,7 @@
 
 <!--Übersicht über gebuchte Reisen -->
 <div class=reiseTabelle>
-    <p class="loginTitle" data-i18n-key="register_title"></p>
+    <p class="loginTitle" data-i18n-key="uebersicht"></p>
     <table id="tabelleReiseuebersicht">
         <tr>
             <th class="aTabelle" data-i18n-key="reiseName"></th>
