@@ -3,5 +3,7 @@
   "anmelden_btn": "Anmelden",
   "registrieren": "Registrieren",
   "email": "E-Mail",
-  "pass": "Passwort"
+  "pass": "Passwort",
+  "register_title": "Neues Konto"
+
 }

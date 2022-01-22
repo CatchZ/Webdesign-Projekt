@@ -3,5 +3,6 @@
   "anmelden_btn": "Log in",
   "registrieren": "Sign up",
   "email": "Email",
-  "pass": "Password"
+  "pass": "Password",
+  "register_title": "Sign up"
 }

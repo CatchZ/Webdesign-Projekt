@@ -31,29 +31,27 @@
         <!--form action="#"-->
         <form id="registrationForm" method="POST" action="#" >
             <div class="center">
-                <p class="loginTitle">Neues Konto</p>
+                <p class="loginTitle" data-i18n-key="register_title"></p>
             </div>
-            <div class="center">
-                <label for="emailReg"></label>
-                <input type="email" name= "email" id="emailReg" placeholder="E-Mail" required/>
-            </div>
-            <br>
-            <div class="center">
-                <label for="passwortReg"></label>
-                <input type="password" id="passwortReg" placeholder="Passwort" required/>
-            </div>
-            <br>
-            <div class="center">
-                <button type="submit">Jetzt registrieren</button>
-            </div>
+
+            <label for="email" data-i18n-key="email">Email</label><br>
+            <input type="email" id="email" data-i18n-key="login_msg" required/>
             <br><br>
+            <label for="passwort" data-i18n-key="pass"></label><br>
+            <input type="password" id="passwort" required/>
+            <br><br>
+            <div class="center">
+                <button type="submit" data-i18n-key="registrieren"></button>
+                <!--onclick="logIn()"-->
+            </div>
+            <br>
 
         </form>
     </div>
 
 </div>
 <!---->
-
+<script src="js/localize.js"></script>
 <script src="js/registrieren.js"></script>
 
 </body>
