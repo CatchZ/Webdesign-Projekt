@@ -1,4 +1,4 @@
-const locale = "de";
+const locale = "en";
 
 const translations = {
     "en": {
