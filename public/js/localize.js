@@ -2,10 +2,14 @@ const locale = "de";
 
 const translations = {
     "en": {
-        "login_msg": "Méld dich an"
+        "login_msg": "Einloggen",
+        "anmelden_btn": "Anmelden",
+        "registrieren": "Registrieren"
     },
     "en": {
-        "login_msg": "log the f in"
+        "login_msg": "Log in",
+        "anmelden_btn": "Anmelden",
+        "registrieren": "Sign up"
     },
 };
 
