@@ -19,10 +19,12 @@
 <body onload="displayLogOut()">
 
 <div class = "localisationOptions">
-    <select name ="language" onChange="{onChange}">
-        <option value="de">Deutsch</option>
-        <option value="en">English</option>
-    </select>
+    <label>
+        <select data-i18n-switcher class="locale-switcher">
+            <option value="de">Deutsch</option>
+            <option value="en">English</option>
+        </select>
+    </label>
 </div>
 
 <div class="center">
