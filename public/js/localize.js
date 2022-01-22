@@ -1,7 +1,7 @@
 const locale = "de";
 
 const translations = {
-    "en": {
+    "de": {
         "login_msg": "Einloggen",
         "anmelden_btn": "Anmelden",
         "registrieren": "Registrieren"
