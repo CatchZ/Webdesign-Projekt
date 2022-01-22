@@ -103,5 +103,5 @@ button, #reiseformularsubmit {
     height: 400px;
 }
 p.hiddenP {
-    visibility: hidden;
+    display: none;
 }
