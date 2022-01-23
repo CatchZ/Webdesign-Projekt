@@ -1,14 +1,12 @@
 // deutsch als default
+const defaultLocale = "de";
 
 let locale;
-
-let defaultLocale = locale;
-
 let translations = {};
 
 document.addEventListener("DOMContentLoaded", () => {
     setLocale(defaultLocale);
-    bindLocaleSwitcher(defaultLocale);
+    bindLocaleSwitcher(locale);
 });
 
 
