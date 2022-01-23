@@ -34,7 +34,6 @@ async function setLocale(newLocale) {
 // locale over the network
 async function fetchTranslationsFor(newLocale) {
     const response = await fetch(`../lang/${newLocale}.json`);
-    console.log("fetchTranslationsFor: " + locale);
 
     return await response.json();
 
@@ -45,14 +44,47 @@ function translatePage() {
     document
         .querySelectorAll("[data-i18n-key]")
         .forEach(translateElement);
-
 }
 
 function translateElement(element) {
     const key = element.getAttribute("data-i18n-key");
     const translation = translations[key];
-    element.innerText = translation;
+    const options = JSON.parse(
+        element.getAttribute("data-i18n-opt")
+    );
+    element.innerText = options
+        ? interpolate(translation, options)
+        : translation;
+}
 
+
+const fullyQualifiedLocaleDefaults = {
+    en: "en-US",
+    de: "de-DE",
+};
+
+function interpolate(message, interpolations) {
+    return Object.keys(interpolations).reduce(
+        (interpolated, key) => {
+            const value = formatNumber(interpolations[key]);
+            return interpolated.replace(
+                new RegExp(`{\s*${key}\s*}`, "g"),
+                value,
+            );
+        },
+        message,
+    );
+}
+function formatNumber(value) {
+    if (typeof value === "object" && value.number) {
+        const { number, ...options } = value;
+        return new Intl.NumberFormat(
+            fullyQualifiedLocaleDefaults[locale],
+            options,
+        ).format(number);
+    } else {
+        return value;
+    }
 }
 function bindLocaleSwitcher(initialValue) {
     const switcher =
