@@ -5,6 +5,8 @@ let p1 = document.createElement('p');
 let a = document.createElement('a');
 let b = document.createElement("button");
 
+let locale= /localize.locale;
+
 appendChildren('Übersichtskarte', "mapUndFormular.html", `../lang/${locale}.json`);
 console.log("Locale from navbar: " + locale);
 appendChildren('Reiseverzeichnis', "tabelleReisen.html",`../lang/${locale}.json`);
