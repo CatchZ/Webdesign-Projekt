@@ -5,7 +5,9 @@ let locale;
 let translations = {};
 
 document.addEventListener("DOMContentLoaded", () => {
-    setLocale(defaultLocale);
+    var currLang = JSON.stringify(localStorage.getItem('currLang'));
+    //setLocale(defaultLocale);
+    setLocale(currLang);
     bindLocaleSwitcher(defaultLocale);
 });
 
@@ -17,7 +19,7 @@ async function setLocale(newLocale) {
         await fetchTranslationsFor(newLocale);
 
     locale = newLocale;
-    defaultLocale = locale;
+    localStorage.setItem('currLang', JSON.stringify(locale));
     translations = newTranslations;
 
     translatePage();
