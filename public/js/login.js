@@ -25,7 +25,7 @@ form.addEventListener('submit', (event) => {
     login(username.value, password.value)
         .then(wasSuccessfulLogin => {
             if (wasSuccessfulLogin) {
-                window.location.replace("../map.html");
+                window.location.replace("../mapUndFormular .html");
             } else {
                 document.getElementById("loginFailed").style.display = "block";
                 //document.getElementById("loginFailed").innerHTML = "Username oder Passwort falsch";
