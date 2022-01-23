@@ -1,5 +1,7 @@
 var getReise = JSON.parse(localStorage.getItem('reisenArray')); //todo
 
+
+
 function showReisen() {
     var table = document.getElementById("tabelleReiseuebersicht");
 
@@ -38,7 +40,7 @@ function reiseLoeschen(r) {
     x-=1; //lol sorry dafür
 
     //todo
-    alert("Reise " + reisenAlt[x].reisename + " wurde gelöscht.");
+    //alert("Reise " + reisenAlt[x].reisename + " wurde gelöscht.");
     landEntfernen(x);
     reisenAlt.splice(x,1);
     //todo
@@ -65,8 +67,7 @@ function reiseAktualisieren(r){
     localStorage.setItem('reisenArray', JSON.stringify(reisenAlt));
 
     //todo
-    alert("Reise " + reisenameAlt + " wurde aktualisiert.");
-    alert("Reise wurde aktualisiert.");
+    //alert("Reise " + reisenameAlt + " wurde aktualisiert.");
 
     //alert(de.delete);
 }
