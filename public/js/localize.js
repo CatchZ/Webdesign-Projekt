@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var currLang = JSON.stringify(localStorage.getItem('currLang'));
     //setLocale(defaultLocale);
     setLocale(currLang);
-    bindLocaleSwitcher(defaultLocale);
+    bindLocaleSwitcher(currLang);
 });
 
 
