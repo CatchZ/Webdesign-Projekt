@@ -108,3 +108,8 @@ a.noDeco {
     text-decoration: none;
     font-size: 25px;
 }
+
+a.noDeco.visited {
+    text-decoration: none;
+    color: white;
+}
