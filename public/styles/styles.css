@@ -104,7 +104,7 @@ button, #reiseformularsubmit {
 }
 p.hide {display: none;}
 
-a.nav {
+a.noDeco {
     text-decoration: none;
     font-size: 25px;
 }
