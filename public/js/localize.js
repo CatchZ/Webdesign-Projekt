@@ -1,20 +1,12 @@
 // deutsch als default
-const defaultLocale = "de";
+let defaultLocale = "de";
 
 let locale;
 let translations = {};
-console.log(locale);
 
 document.addEventListener("DOMContentLoaded", () => {
-    if ( locale){
-        setLocale(locale);
-        bindLocaleSwitcher(locale);
-
-    } else {
-        setLocale("de");
-        bindLocaleSwitcher("de");
-
-    }
+    setLocale(defaultLocale);
+    bindLocaleSwitcher(defaultLocale);
 });
 
 
@@ -25,6 +17,7 @@ async function setLocale(newLocale) {
         await fetchTranslationsFor(newLocale);
 
     locale = newLocale;
+    defaultLocale = locale;
     translations = newTranslations;
 
     translatePage();
@@ -63,5 +56,7 @@ function bindLocaleSwitcher(initialValue) {
     switcher.onchange = (e) => {
         // Set the locale to the selected option[value]
         setLocale(e.target.value);
+        console.log("switcher.onchange: " + locale);
+
     };
 }
