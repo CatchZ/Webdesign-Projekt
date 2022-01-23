@@ -1,7 +1,9 @@
 // deutsch als default
-const defaultLocale = locale;
 
 let locale;
+
+let defaultLocale = locale;
+
 let translations = {};
 
 document.addEventListener("DOMContentLoaded", () => {
