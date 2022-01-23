@@ -66,4 +66,5 @@ function reiseAktualisieren(r){
 
     //todo
     alert("Reise " + reisenameAlt + " wurde aktualisiert.");
+    //alert(de.delete);
 }

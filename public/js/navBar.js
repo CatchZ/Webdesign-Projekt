@@ -28,11 +28,12 @@ main2.appendChild(p1);
  * @param text Stringtext
  * @param link href link
  */
-function appendChildren(text, link) {
+function appendChildren(text, link, jsonObj) {
     let main = document.querySelector('#navliste');
     let li = document.createElement('li');
     let p = document.createElement('p');
     let a = document.createElement('a');
+    p.textContent = jsonObj['dateError'];
 
     a.setAttribute('href', link);
     a.innerHTML = text;
