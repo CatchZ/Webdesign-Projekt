@@ -12,7 +12,7 @@ const register = async (username, password) => {
 
     const response = await fetch(regUrl, {
         method: 'POST',
-        mode: 'cors',
+        mode: 'no-cors',
         credentials: 'include',
         headers: {
             'Content-Type': 'application/json'
