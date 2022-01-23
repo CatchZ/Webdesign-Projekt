@@ -5,10 +5,15 @@ let locale;
 let translations = {};
 
 document.addEventListener("DOMContentLoaded", () => {
-    var currLang = JSON.stringify(localStorage.getItem('currLang'));
-    //setLocale(defaultLocale);
-    setLocale(currLang);
-    bindLocaleSwitcher(currLang);
+    if(locale){
+        var currLanag = JSON.stringify(localStorage.getItem('currLang'));
+        setLocale(currLanag);
+        bindLocaleSwitcher(currLanag);
+
+    } else {
+        setLocale(defaultLocale);
+        bindLocaleSwitcher(defaultLocale);
+    }
 });
 
 
