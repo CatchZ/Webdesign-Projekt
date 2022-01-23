@@ -27,6 +27,7 @@ main2.appendChild(p1);
  * </li>
  * @param text Stringtext
  * @param link href link
+ * @param jsonObj
  */
 function appendChildren(text, link, jsonObj) {
     let main = document.querySelector('#navliste');
