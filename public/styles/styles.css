@@ -48,11 +48,12 @@ button, #reiseformularsubmit {
     color: white;
     display: block;
     padding: 14px 16px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
 .navbar li:hover {
-    background-color: black;
+    background-color: rgba(146, 222, 146, 0.63);
 }
 
 .reiseErsteller {
