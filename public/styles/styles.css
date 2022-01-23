@@ -109,7 +109,7 @@ a.noDeco {
     font-size: 25px;
 }
 
-a.noDeco.visited {
+a.noDeco:visited {
     text-decoration: none;
     color: white;
 }
