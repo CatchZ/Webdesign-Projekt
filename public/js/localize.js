@@ -5,8 +5,15 @@ let locale;
 let translations = {};
 
 document.addEventListener("DOMContentLoaded", () => {
-    setLocale(defaultLocale);
-    bindLocaleSwitcher(defaultLocale);
+    if ( locale){
+        setLocale(locale);
+        bindLocaleSwitcher(locale);
+
+    } else {
+        setLocale("de");
+        bindLocaleSwitcher("de");
+
+    }
 });
 
 
@@ -20,7 +27,6 @@ async function setLocale(newLocale) {
     translations = newTranslations;
 
     translatePage();
-    console.log("setLocale: " + locale);
 }
 
 // Retrieve translations JSON object for the given
@@ -38,7 +44,6 @@ function translatePage() {
     document
         .querySelectorAll("[data-i18n-key]")
         .forEach(translateElement);
-    console.log("translatePage: " + locale);
 
 }
 
@@ -46,7 +51,6 @@ function translateElement(element) {
     const key = element.getAttribute("data-i18n-key");
     const translation = translations[key];
     element.innerText = translation;
-    console.log("translateElement: " + locale);
 
 }
 function bindLocaleSwitcher(initialValue) {
@@ -54,12 +58,9 @@ function bindLocaleSwitcher(initialValue) {
         document.querySelector("[data-i18n-switcher]");
 
     switcher.value = initialValue;
-    console.log("initialValue: " + locale + ", initial value: " + initialValue);
 
     switcher.onchange = (e) => {
         // Set the locale to the selected option[value]
         setLocale(e.target.value);
-        console.log("switcher.onchange: " + locale);
-
     };
 }
