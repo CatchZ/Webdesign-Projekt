@@ -6,7 +6,7 @@ let translations = {};
 
 document.addEventListener("DOMContentLoaded", () => {
     setLocale(defaultLocale);
-    bindLocaleSwitcher(locale);
+    bindLocaleSwitcher(defaultLocale);
 });
 
 
