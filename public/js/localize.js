@@ -3,6 +3,7 @@ const defaultLocale = "de";
 
 let locale;
 let translations = {};
+console.log(locale);
 
 document.addEventListener("DOMContentLoaded", () => {
     if ( locale){
