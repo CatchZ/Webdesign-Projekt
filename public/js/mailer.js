@@ -1,4 +1,4 @@
-/*document.getElementById("registrationForm2").addEventListener("submit", mail);
+document.getElementById("registrationForm2").addEventListener("submit", mail);
 
 "use strict";
 const nodemailer = require("nodemailer");
@@ -33,4 +33,3 @@ async function mail() {
 
 mail().catch(console.error);
 
- */
