@@ -1,5 +1,5 @@
 // deutsch als default
-const defaultLocale = "de";
+const defaultLocale = locale;
 
 let locale;
 let translations = {};
